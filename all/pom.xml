@@ -213,8 +213,8 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-events/ui.apps/target/com.adobe.aem.guides.wknd-events.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-events.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
 
                 // WKND Mobile (AEM Headlesss)
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
             -->
         </repository>
     </repositories>
