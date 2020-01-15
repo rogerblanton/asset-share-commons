@@ -213,6 +213,8 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-events/ui.apps/target/com.adobe.aem.guides.wknd-events.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-events.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
 
                 // WKND Mobile (AEM Headlesss)
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
             -->
         </repository>
     </repositories>
@@ -235,13 +237,15 @@
         </dependency>
 
         <!-- Demo/embed dependencies -->
+
+
+        <!-- WKND Site -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.apps</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
-
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.content</artifactId>
@@ -249,13 +253,13 @@
             <type>zip</type>
         </dependency>
 
+        <!-- WKND SPA Editor / Events -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>com.adobe.aem.guides.wknd-events.ui.apps</artifactId>
             <version>2.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
-
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>com.adobe.aem.guides.wknd-events.ui.content</artifactId>
@@ -263,6 +267,21 @@
             <type>zip</type>
         </dependency>
 
+        <!-- WKND Mobile / AEM Headless -->
+        <dependency>
+            <groupId>com.adobe.aem.guides</groupId>
+            <artifactId>com.adobe.aem.guides.wknd-mobile.ui.apps</artifactId>
+            <version>2.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem.guides</groupId>
+            <artifactId>com.adobe.aem.guides.wknd-mobile.ui.content</artifactId>
+            <version>2.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+
+        <!-- Asset Share Commons -->
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.apps</artifactId>
@@ -270,6 +289,7 @@
             <type>zip</type>
         </dependency>
 
+        <!-- Core Components -->
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.content</artifactId>
