@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.adobe.aem.guides</groupId>
+  <artifactId>com.adobe.aem.guides.wknd-events.ui.content</artifactId>
+  <versioning>
+    <versions>
+      <version>2.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200115201942</lastUpdated>
+  </versioning>
+</metadata>

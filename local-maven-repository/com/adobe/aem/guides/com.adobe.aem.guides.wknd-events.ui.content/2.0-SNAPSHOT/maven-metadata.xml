@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.adobe.aem.guides</groupId>
+  <artifactId>com.adobe.aem.guides.wknd-events.ui.content</artifactId>
+  <version>2.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20200115.201942</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20200115201942</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>zip</extension>
+        <value>2.0-20200115.201942-1</value>
+        <updated>20200115201942</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>2.0-20200115.201942-1</value>
+        <updated>20200115201942</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

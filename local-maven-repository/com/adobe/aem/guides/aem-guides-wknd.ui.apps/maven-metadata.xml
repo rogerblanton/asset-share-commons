@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.adobe.aem.guides</groupId>
+  <artifactId>aem-guides-wknd.ui.apps</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200115203942</lastUpdated>
+  </versioning>
+</metadata>
