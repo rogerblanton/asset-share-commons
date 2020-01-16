@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.adobe.aem.demo</groupId>
+  <artifactId>com.adobe.aem.demo.demo-utils.ui.apps</artifactId>
+  <version>2020.01.16-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20200116.160648</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20200116160648</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>zip</extension>
+        <value>2020.01.16-20200116.160648-1</value>
+        <updated>20200116160648</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>2020.01.16-20200116.160648-1</value>
+        <updated>20200116160648</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

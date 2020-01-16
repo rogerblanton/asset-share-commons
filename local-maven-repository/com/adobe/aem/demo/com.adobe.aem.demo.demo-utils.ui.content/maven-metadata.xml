@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.adobe.aem.demo</groupId>
+  <artifactId>com.adobe.aem.demo.demo-utils.ui.content</artifactId>
+  <versioning>
+    <versions>
+      <version>2020.01.16-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200116160554</lastUpdated>
+  </versioning>
+</metadata>
