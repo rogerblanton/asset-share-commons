@@ -106,6 +106,19 @@
                         </embedded>
 
                         <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>com.adobe.aem.guides.wknd-mobile.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>com.adobe.aem.guides.wknd-mobile.ui.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>
+
+                        <embedded>
                             <groupId>com.adobe.aem.demo</groupId>
                             <artifactId>com.adobe.aem.demo.demo-utils.ui.apps</artifactId>
                             <type>zip</type>
