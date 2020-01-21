@@ -246,7 +246,7 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
 
                 // Asset Share Commons
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.content/target/asset-share-commons.ui.content-1.8.0.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare -Dpackaging=zip -Dversion=1.8.0
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.content/target/asset-share-commons.ui.content-1.8.0.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content -Dpackaging=zip -Dversion=1.8.0
             -->
         </repository>
     </repositories>
