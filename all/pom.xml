@@ -241,9 +241,12 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
 
-                // WKND Mobile (AEM Headlesss)
+                // Demo Utils
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
+
+                // Asset Share Commons
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.content/target/asset-share-commons.ui.content-1.8.0.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare -Dpackaging=zip -Dversion=1.8.0
             -->
         </repository>
     </repositories>
@@ -340,6 +343,12 @@
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.apps</artifactId>
+            <version>[0.0.0,)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem.commons</groupId>
+            <artifactId>assetshare.ui.content</artifactId>
             <version>[0.0.0,)</version>
             <type>zip</type>
         </dependency>
