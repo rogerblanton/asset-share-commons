@@ -66,6 +66,8 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
                         -->
+
+                        <!-- Core Components -->
                         <embedded>
                             <groupId>com.adobe.cq</groupId>
                             <artifactId>core.wcm.components.content</artifactId>
@@ -79,6 +81,7 @@
                             <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
 
+                        <!-- WKND Sites -->
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>aem-guides-wknd.ui.apps</artifactId>
@@ -92,6 +95,7 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
 
+                        <!-- WKND SPA Editor -->
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>com.adobe.aem.guides.wknd-events.ui.apps</artifactId>
@@ -105,6 +109,7 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
 
+                        <!-- WKND - AEM Headless -->
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>com.adobe.aem.guides.wknd-mobile.ui.apps</artifactId>
@@ -118,6 +123,7 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
 
+                        <!-- Demo Utils -->
                         <embedded>
                             <groupId>com.adobe.aem.demo</groupId>
                             <artifactId>com.adobe.aem.demo.demo-utils.ui.apps</artifactId>
@@ -131,11 +137,33 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
 
+                        <!-- Showcase - Core Components -->
+                        <embedded>
+                            <groupId>com.adobe.aem.demo</groupId>
+                            <artifactId>com.adobe.aem.demo.showcase.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.demo</groupId>
+                            <artifactId>com.adobe.aem.demo.showcase.ui.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>
+
+                        <!-- Asset Share Commons -->
                         <embedded>
                             <groupId>com.adobe.aem.commons</groupId>
                             <artifactId>assetshare.ui.apps</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
+
+                        <embedded>
+                            <groupId>com.adobe.aem.commons</groupId>
+                            <artifactId>assetshare.ui.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -241,6 +269,10 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
 
+                // Core Components Showcase
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.showcase/ui.content/target/com.adobe.aem.demo.showcase.ui.content-1.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.content -Dpackaging=zip -Dversion=1.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.showcase/ui.apps/target/com.adobe.aem.demo.showcase.ui.apps-1.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.apps -Dpackaging=zip -Dversion=1.0-SNAPSHOT
+
                 // Demo Utils
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
@@ -325,6 +357,20 @@
             <type>zip</type>
         </dependency>
 
+        <!-- Core Components Showcase -->
+        <dependency>
+            <groupId>com.adobe.aem.demo</groupId>
+            <artifactId>com.adobe.aem.demo.showcase.ui.apps</artifactId>
+            <version>[0.0.0,)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem.demo</groupId>
+            <artifactId>com.adobe.aem.demo.showcase.ui.content</artifactId>
+            <version>[0.0.0,)</version>
+            <type>zip</type>
+        </dependency>
+
         <!-- Demo Utils -->
         <dependency>
             <groupId>com.adobe.aem.demo</groupId>
@@ -343,13 +389,13 @@
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.apps</artifactId>
-            <version>[0.0.0,)</version>
+            <version>[1.8.0,)</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.content</artifactId>
-            <version>[0.0.0,)</version>
+            <version>[1.8.0,)</version>
             <type>zip</type>
         </dependency>
     </dependencies>
