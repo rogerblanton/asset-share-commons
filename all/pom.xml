@@ -80,6 +80,13 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
+                        <!-- Technically a mixed package; but its all we have -->
+                        <embedded>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.examples</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
 
                         <!-- WKND Sites -->
                         <embedded>
@@ -315,6 +322,14 @@
             <type>zip</type>
         </dependency>
 
+        <!-- Core Components Library -->
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.examples</artifactId>
+            <version>${core.wcm.components.version}</version>
+            <type>zip</type>
+        </dependency>
+
         <!-- WKND Site -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
@@ -370,6 +385,7 @@
             <version>[0.0.0,)</version>
             <type>zip</type>
         </dependency>
+
 
         <!-- Demo Utils -->
         <dependency>
