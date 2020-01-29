@@ -85,8 +85,7 @@
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
-
-
+        
         <dependency>
             <groupId>com.adobe.aem.demo</groupId>
             <artifactId>com.adobe.aem.demo.all-demos.repository-structure</artifactId>
