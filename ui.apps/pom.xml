@@ -55,7 +55,7 @@
                     <accessControlHandling>merge</accessControlHandling>
                     <allowIndexDefinitions>true</allowIndexDefinitions>
                     <properties>
-                        <cloudManagerTarget>none</cloudManagerTarget>&gt;
+                        <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
