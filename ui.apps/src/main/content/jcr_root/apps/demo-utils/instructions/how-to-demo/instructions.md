@@ -125,7 +125,16 @@ Demo packages can be installed on the local AEM as a Cloud Service Quickstart Ja
 
 + [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
 
+---
+
+### Can I use We.Retail on AEM as a Cloud Service?
+
+No.
+
+We.Retail has dependencies on APIs that are not available in AEM as a Cloud Service so it will not work there. Instead, use the WKND Site which is the new AEM reference web site.
+
 ----
+
 
 Please report any issues to <a href="mailto:Grp-AEMTechMarketing@adobe.com">Grp-AEMTechMarketing@adobe.com</a>
 
