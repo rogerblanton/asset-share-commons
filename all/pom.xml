@@ -280,7 +280,8 @@
                 mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
 
                 // Asset Share Commons, ui.content
-                mvn deploy:deploy-file ....
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.content/target/asset-share-commons.ui.content-1.9.4.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content -Dpackaging=zip -Dversion=1.9.4
+                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-1.9.4.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=1.9.4
 
 
         </repository>
@@ -407,13 +408,13 @@
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.apps</artifactId>
-            <version>1.9.0</version>
+            <version>[1.9.4,)</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.content</artifactId>
-            <version>1.9.0</version>
+            <version>[1.9.0,)</version>
             <type>zip</type>
         </dependency>
     </dependencies>
