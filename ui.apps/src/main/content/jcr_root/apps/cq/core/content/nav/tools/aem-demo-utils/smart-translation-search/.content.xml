@@ -4,7 +4,7 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="Smart Translation Search"
     href="/apps/demo-utils/instructions/smart-translation-search.html"
-    icon="substractFromSelection"
+    icon="globeSearch"
     id="aem-demo-utils__smart-translation-search"
     target="_blank"/>
 <!-- icon="globeSearch" -->

@@ -9,6 +9,8 @@
 
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
+<!-- 65_INSTRUCTIONS -->
+
 ## Demos
 
 * [Asset Share Commons Demo](https://internal.adobedemo.com/content/demo-hub/en/demos/external/aem-assets-asset-share-commons.html)

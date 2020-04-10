@@ -24,7 +24,7 @@
 
 <dd>
     <input type="checkbox" id="adobe-asset-link" name="adobe-asset-link" value="install"/>
-    <label for="adobe-asset-link">Adobe Asset Link <em>(requires one-time manual extension set up)</em></label>
+    <label for="adobe-asset-link">Adobe Asset Link <em>(requires <a  x-cq-linkchecker="skip"  href="/apps/demo-utils/instructions/adobe-asset-link.html">one-time Adobe Extension installation</a>)</em></label>
 </dd>
 
 

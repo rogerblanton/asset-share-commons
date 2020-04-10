@@ -1,4 +1,4 @@
-## Cloud Set up
+## Cloud set up
 
 Core Components Showcase is included as part of the All Demos project that can be deployed to AEM as a Cloud Service environments via Cloud Manager.
 

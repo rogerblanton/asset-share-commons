@@ -37,6 +37,8 @@ The community-provided AEM ClientLibrary NPM Module was used to build this front
  <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
  <!-- QUICKSTART_INSTRUCTIONS -->
+ 
+  <!-- 65_INSTRUCTIONS -->
 
 <p><a href="https://internal.adobedemo.com/content/demo-hub/en/demos/external/aem-sites-core-component-showcase.html" target="_blank" class="button">View on DemoHub</a> </p>
 

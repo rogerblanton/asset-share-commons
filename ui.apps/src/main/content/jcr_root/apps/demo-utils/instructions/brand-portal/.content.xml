@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="sling:Folder"
-    sling:resourceType="demo-utils/instructions/brand-portal"
-    sling:resourceSuperType="demo-utils/components/base"
-    jcr:title="Brand Portal"
-      subProducts="[AEM Assets]"/>
+          jcr:primaryType="sling:Folder"
+          sling:resourceType="demo-utils/instructions/brand-portal"
+          sling:resourceSuperType="demo-utils/components/base"
+          jcr:title="Brand Portal"
+          subProducts="[AEM Assets]"
+          cloudService="cloud-service"
+          cloudServiceQuickstart="cloud-service"
+          aem65="65"/>

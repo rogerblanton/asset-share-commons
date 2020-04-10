@@ -1,3 +1,5 @@
-<div class="unsupported">
-Smart Translation Search is currently not supported by AEM as a Cloud Service.
-</div>
+<!-- CLOUD-SERVICE_INSTRUCTIONS -->
+
+<!-- QUICKSTART_INSTRUCTIONS -->
+
+<!-- 65_INSTRUCTIONS -->

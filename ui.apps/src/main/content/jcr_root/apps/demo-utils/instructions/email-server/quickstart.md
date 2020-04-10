@@ -1,6 +1,6 @@
 ## Local Set up
 
-When running AEM as a Cloud Sevice locally via the AEM SDK's Quickstart Jar, Demo Utils installs a Email server configuration that works, because the AEM as a Could Service infrastructure is not in play to block the calls from AEM to the Email Server.
+When running AEM as a Cloud Service locally via the AEM SDK's Quickstart Jar, Demo Utils installs a Email server configuration that works, because the AEM as a Could Service infrastructure is not in play to block the calls from AEM to the Email Server.
 
 This package installs a SMTP E-mail Server configuration using the e-mail account **aem@enablementadobe.com**.
 

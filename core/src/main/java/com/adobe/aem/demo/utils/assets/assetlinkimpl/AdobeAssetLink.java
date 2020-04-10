@@ -45,7 +45,7 @@ import java.util.Calendar;
         }
 )
 public class AdobeAssetLink extends AbstractExecutable {
-    public static final String CONFIG_PACKAGE_PATH = "/apps/demo-utils/resources/adobe-asset-link/aem-demo-utils.asset-link-config-1.1.0.zip";
+    public static final String CONFIG_PACKAGE_PATH = "/apps/demo-utils/resources/adobe-asset-link/com.adobe.aem.demo.demo-utils.asset-link-config-2.0.zip";
     private static Logger log = LoggerFactory.getLogger(AdobeAssetLink.class);
 
     @Reference
@@ -69,7 +69,7 @@ public class AdobeAssetLink extends AbstractExecutable {
     public void execute(SlingHttpServletRequest request, SlingHttpServletResponse response) throws Exception {
         final ResourceResolver resourceResolver = request.getResourceResolver();
 
-        addToAdministrators(request.adaptTo(Session.class));
+        addToAdministrators(request.getResourceResolver().adaptTo(Session.class));
         
         installPackage(resourceResolver, CONFIG_PACKAGE_PATH);
 
@@ -90,7 +90,7 @@ public class AdobeAssetLink extends AbstractExecutable {
 
     private static void addToAdministrators(Session session) throws RepositoryException {
         if (!(session instanceof JackrabbitSession)) {
-            throw new RepositoryException("The repository does not support dynamic_media_replication user");
+            throw new RepositoryException("The repository is not Jackrabbit repository [ session == null -> " + (session == null) + " ]");
         }
         JackrabbitSession jackrabbitSession = (JackrabbitSession) session;
 

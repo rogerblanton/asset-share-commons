@@ -4,7 +4,6 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="AEM Email Server"
     href="/apps/demo-utils/instructions/email-server.html"
-    icon="substractFromSelection"
+    icon="email"
     id="aem-demo-utils__email-server"
     target="_blank"/>
-<!-- icon="email" -->

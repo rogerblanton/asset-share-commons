@@ -6,9 +6,11 @@
 
 Dynamic Media provides processing of the video asset and special viewers that allow end-user to interact (pan, rotate, etc.) with the 360/VR video.
 
-<div class="unsupported">
-    360/VR video viewers currently do no work in AEM as a Cloud Service due to bugs.
-</div>
+<!-- CLOUD-SERVICE_INSTRUCTIONS -->
+
+<!-- QUICKSTART_INSTRUCTIONS -->
+
+<!-- 65_INSTRUCTIONS -->
 
 ## Demos
 

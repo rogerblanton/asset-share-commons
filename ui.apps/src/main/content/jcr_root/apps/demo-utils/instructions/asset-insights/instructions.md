@@ -27,6 +27,8 @@ To generate Asset Insights Usage and Summary data, the **Generate Asset Insights
 
 <!-- QUICKSTART_INSTRUCTIONS -->
 
+<!-- 65_INSTRUCTIONS -->
+
 ## Demos
 
 * [AEM Assets - Assets Insights Demo Script](https://internal.adobedemo.com/content/demo-hub/en/demos/external/aem-assets-insights-6-3.html)

@@ -3,9 +3,12 @@ mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
 AEM's SPA Editor framework provides authors the ability to edit content for a Single Page Application (SPA). D  evelopers using the framework create a SPA and then map areas of the SPA to AEM components, allowing authors to use familiar AEM Sites editing tools. The below videos shows authoring content for a SPA built using the React JS framework in AEM.
 
+<!-- CLOUD-SERVICE_INSTRUCTIONS -->
+
 <!-- QUICKSTART_INSTRUCTIONS -->
 
-<!-- CLOUD-SERVICE_INSTRUCTIONS -->
+<!-- 65_INSTRUCTIONS -->
+
 
 ## Editable Template Support
 

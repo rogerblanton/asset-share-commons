@@ -1,4 +1,4 @@
-## Local Set up
+## Local set up
 
 ### Automatic set up instructions
 
@@ -6,11 +6,11 @@
 
 *This setup installs 1 AEM packages that include the required code and configuration to setup Adobe Asset Link against a shared, demo IMS account. See the Manual setup instructions below for details.*
 
-> Note: Currently there is an issue logging into AEM with enterprise ID. Continue to login to AEM with the local admin:admin account.
+> Note: Currently there is an issue logging into AEM with enterprise ID. Continue to login to AEM with the local admin account.
 
 ![AEM Local Login](./adobe-asset-link/images/aem-login-locally.png)
 
-### Troubleshooting the Authorization Error
+### Troubleshooting the authorization error
 
 The first time logging in to AEM via the Asset Link panel you may see an *Authorization Error*.
 
@@ -31,7 +31,7 @@ To resolve this:
 
 <ol>
 <li>Download <a
-        href="/apps/demo-utils/resources/adobe-asset-link/aem-demo-utils.asset-link-config-1.1.0.zip" x-cq-linkchecker="skip" target="_blank">aem-demo-utils.asset-link-config-1.1.0</a> AEM content package.
+        href="/apps/demo-utils/resources/adobe-asset-link/com.adobe.aem.demo.demo-utils.asset-link-config-2.0.zip" x-cq-linkchecker="skip" target="_blank">com.adobe.aem.demo.demo-utils.asset-link-config-2.x.zip</a> AEM content package.
 </li>
 <li>Install the downloaded AEM Package via <a x-cq-linkchecker="skip" href="/crx/packmgr/index.jsp" target="_blank">AEM Package Manager</a>.
      <br/>

@@ -3,6 +3,10 @@
 There is plan to have auto-provisioning for Smart Tags in AEM as a Cloud Service but not ready yet.
 </div>
 
+<div class="unsupported">
+Smart Tags Training (aka Enhanced Smart Tags) is currently not supported by AEM as a Cloud Service.
+</div>
+
 ## Automatic Cloud Set up
 
 Click the buttons below to automatically set up the Smart Tags cloud service:

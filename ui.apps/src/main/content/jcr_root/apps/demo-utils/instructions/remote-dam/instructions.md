@@ -11,6 +11,8 @@ mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
 <!-- QUICKSTART_INSTRUCTIONS -->
 
+<!-- 65_INSTRUCTIONS -->
+
 ## How to use
 
 1. On the **Assets** instance upload a net-new image to the DAM (ensure its not an image that exists on the **Sites** instance).

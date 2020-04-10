@@ -1,3 +1,9 @@
+<div class="unsupported">
+Parts of Dynamic Media currently do not work on AEM as a Cloud Service due to bugs.
+
+Known areas that currently do NOT work include: Viewers, including 360/VR, Preview artwork
+</div>
+
 ### Automatic Cloud Set up
 
 Click the button below to automatically set up the Dynamic Media Cloud Service.

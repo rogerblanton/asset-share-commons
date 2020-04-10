@@ -10,3 +10,5 @@ Note that Visual Search does NOT simply compare Smart Tag values (ie. the keywor
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
 <!-- QUICKSTART_INSTRUCTIONS -->
+
+<!-- 65_INSTRUCTIONS -->

@@ -7,6 +7,8 @@ mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
+<!-- 65_INSTRUCTIONS -->
+
 ### Edit the Adobe Stock cloud service (and/or add permissions)
 
 1. Navigate to **[AEM > Tools > Cloud Services](/libs/cq/adobeims-configuration/content/configurations.html)**

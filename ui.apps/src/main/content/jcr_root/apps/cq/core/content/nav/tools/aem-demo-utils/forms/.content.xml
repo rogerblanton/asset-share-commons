@@ -4,7 +4,6 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="AEM Forms"
     href="/apps/demo-utils/instructions/forms.html"
-    icon="substractFromSelection"
+    icon="form"
     id="aem-demo-utils__forms"
     target="_blank"/>
-<!-- icon-"form" -->

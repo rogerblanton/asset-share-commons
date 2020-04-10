@@ -1,6 +1,5 @@
 ## Local Set up
 
-<!--
 ### All Demos Set up
 
 If Demo Utils was installed the via the All Demos package, then Asset Share Commons is also installed.
@@ -8,7 +7,6 @@ If Demo Utils was installed the via the All Demos package, then Asset Share Comm
 * [Go to the Asset Share Commons Demo sites](/sites.html/content/asset-share-commons/en)
 
 ### Standalone Set up
--->
 
 If Demo Utils package was directly installed, and not part of All Demos, please install the latest Asset Share Commons packages.
 
@@ -17,3 +15,11 @@ If Demo Utils package was directly installed, and not part of All Demos, please 
     * asset-share-commons.ui.content-x.x.x.zip (~75MB)
 2. Upload and Install both packages to AEM Author via <a href="/crx/packmgr/index.jsp" x-cq-linkchecker="skip" target="_blank">AEM Package Manager</a>.
 3. To demo on AEM Publish, both packages should be uploaded and installed on <a href="http://localhost:4503/crx/packmgr/index.jsp" x-cq-linkchecker="skip" target="_blank">AEM Publish as well via AEM Package manager</a>.
+
+### AEM as a Cloud Service incompatibilities
+
+The bulk of Asset Share Commons works on AEM as a Cloud Service, however the following features may need to be implemented on a per-project basis to meet AEM as a Cloud  Services best practices:
+
+* Asset download via zip file
+* Asset sharing via e-mail
+

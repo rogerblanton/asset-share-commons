@@ -7,12 +7,14 @@ import com.adobe.aem.demo.utils.impl.Constants;
 import com.adobe.granite.crypto.CryptoSupport;
 import com.adobe.granite.keystore.KeyStoreNotInitialisedException;
 import com.adobe.granite.keystore.KeyStoreService;
+import com.adobe.granite.license.ProductInfoProvider;
 import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.model.WorkflowModel;
 import com.adobe.granite.workflow.model.WorkflowNode;
 import com.adobe.granite.workflow.model.WorkflowTransition;
 import com.google.common.collect.ImmutableMap;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.api.JackrabbitSession;
@@ -44,6 +46,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static com.adobe.aem.demo.utils.models.impl.MarkdownWrapperImpl.ORIGINAL_CLOUD_SERVICE_VERSION;
+
 @Component(service = {Servlet.class, Executable.class},
         property = {
                 "sling.servlet.methods=GET",
@@ -62,6 +66,10 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
     private static final String PATH_CERTS = "/apps/demo-utils/resources/smart-tags/";
     private static final String SMART_TAGS_WORKFLOW_PROCESS = "com.day.cq.dam.similaritysearch.internal.workflow.process.AutoTagAssetProcess";
     private static Logger log = LoggerFactory.getLogger(InstallSmartTags.class);
+
+    @Reference
+    private ProductInfoProvider productInfoProvider;
+
     @Reference
     private KeyStoreService keyStoreService;
 
@@ -139,6 +147,10 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
 
         try {
             createKeyStore(resourceResolver, region);
+            if (productInfoProvider.getProductInfo().getVersion().compareTo(ORIGINAL_CLOUD_SERVICE_VERSION) < 0) {
+                // 6.5 only
+                setupIndexes(resourceResolver);
+            }
             updateWorkflow(resourceResolver);
         } catch (Exception e) {
             throw new ServletException(e);
@@ -157,6 +169,40 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
             resourceResolver.commit();
         }
     }
+
+    /* ************************************************************************************************************
+       ISOLATE TENANT
+    * ************************************************************************************************************/
+    private void setupIndexes(ResourceResolver resourceResolver) throws PersistenceException {
+        Resource luceneIndex = resourceResolver.getResource("/oak:index/lucene");
+        ModifiableValueMap luceneProperties = luceneIndex.adaptTo(ModifiableValueMap.class);
+
+        luceneProperties.put("costPerEntry", Double.valueOf(2));
+        luceneProperties.put("costPerExecution", Double.valueOf(2));
+        luceneProperties.put("refresh", true);
+
+        Resource damAssetLuceneIndex = resourceResolver.getResource("/oak:index/damAssetLucene/indexRules/dam:Asset/properties");
+
+        if (damAssetLuceneIndex.getChild("imageFeatures") != null) {
+            resourceResolver.delete(damAssetLuceneIndex.getChild("imageFeatures"));
+        }
+
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("name", "jcr:content/metadata/imageFeatures/haystack0");
+        properties.put("nodeScopeIndex", true);
+        properties.put("propertyIndex", true);
+        properties.put("useInSimilarity", true);
+        resourceResolver.create(damAssetLuceneIndex, "imageFeatures", properties);
+
+        Resource predictedTags = resourceResolver.getResource("/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags");
+        ModifiableValueMap predictedTagsProperties = predictedTags.adaptTo(ModifiableValueMap.class);
+        predictedTagsProperties.put("similarityTags", true);
+
+        Resource damAssetLucene = resourceResolver.getResource("/oak:index/damAssetLucene");
+        ModifiableValueMap damAssetLuceneProperties = predictedTags.adaptTo(ModifiableValueMap.class);
+        predictedTagsProperties.put("reindex", true);
+    }
+
 
     /* ************************************************************************************************************
        ISOLATE TENANT
@@ -374,4 +420,6 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
     private String getUserId(ResourceResolver resourceResolver) throws RepositoryException {
         return ((JackrabbitSession) resourceResolver.adaptTo(Session.class)).getUserManager().getAuthorizable(SERVICE_USER_ID).getID();
     }
+
+
 }

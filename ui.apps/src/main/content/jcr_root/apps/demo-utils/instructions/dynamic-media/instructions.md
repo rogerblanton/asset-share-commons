@@ -1,16 +1,12 @@
 <form method="post" target="_blank"><input type="hidden" name=":cq_csrf_token"/></form>
 
-<div class="unsupported">
-Parts of Dynamic Media currently do not work on AEM as a Cloud Service due to bugs.
-
-Known areas that currently do NOT work include: Viewers, including 360/VR, Preview artwork
-</div>
-
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
 <!-- QUICKSTART_INSTRUCTIONS -->
 
-#### Checking the Set up Sync Status
+<!-- 65_INSTRUCTIONS -->
+
+#### Checking the set up sync status
 
 **Syncing** refers to the pushing of resources and files to Scene 7 for processing. 
 
@@ -52,9 +48,9 @@ For the exact paths pending sync, click the button below...
 <a href="/.sampleassets.listUnsynced.json" class="button" data-action="form">List un-synced</a>
 *A blank response for statuses is good! It means there are no un-synced/activated resources.*
 
-## Checking Dynamic Media Set up Progress
+## Checking Dynamic Media set up progress
 
-### Checking the Set up Activation Status
+### Checking the set up activation status
 
 **Activation** refers to the pushing fo resources and files to public Dynamic Media Delivery network. 
 

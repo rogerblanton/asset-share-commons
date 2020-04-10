@@ -3,7 +3,8 @@ package com.adobe.aem.demo.utils.models;
 /**
  * Instructions Markdown to HTML SLing Model
  **/
-public interface MarkdownWrapper {
+public interface
+MarkdownWrapper {
     /***
      * @return the HTML rendition of the instructions.md markdown file.
      */
@@ -11,5 +12,8 @@ public interface MarkdownWrapper {
 
     String getCloudServiceInstructions();
 
-    String getQuickstartInstructions();
+    String getCloudServiceQuickstartInstructions();
+
+    String get65Instructions();
+
 }

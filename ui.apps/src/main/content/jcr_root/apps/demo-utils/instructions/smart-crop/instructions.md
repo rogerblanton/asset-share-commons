@@ -1,9 +1,14 @@
 <iframe title="Adobe Video Publishing Cloud Player" width="854" height="480" src="https://video.tv.adobe.com/v/21519/?quality=12&autoplay=false&hidetitle=true&marketingtech.adobe.analytics.additionalAccounts=tmdtmdaemdemoutilsprod" frameborder="0" webkitallowfullscreen
 mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
+Ensure that you have completed the steps to [Set up Dynamic Media](/apps/demo-utils/instructions/dynamic-media.html) **before** proceeding. (Sorry if you came here first!)
+
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
 
 <!-- QUICKSTART_INSTRUCTIONS -->
+
+<!-- 65_INSTRUCTIONS -->
+
 
 ## Demos
 

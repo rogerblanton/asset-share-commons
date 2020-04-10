@@ -4,8 +4,6 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="Brand Portal"
     href="/apps/demo-utils/instructions/brand-portal.html"
-    icon="substractFromSelection"
+    icon="upload"
     id="aem-demo-utils__brand-portal"
     target="_blank"/>
-
-<!-- icon="upload" -->

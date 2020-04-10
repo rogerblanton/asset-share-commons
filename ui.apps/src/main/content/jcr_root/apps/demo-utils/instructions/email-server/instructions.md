@@ -1,6 +1,3 @@
-<div class="unsupported">
-Sending e-mail from AEM as a Cloud Service is currently NOT supported.
-</div>
 
 This effects a variety of feature such as:
 
@@ -9,4 +6,9 @@ This effects a variety of feature such as:
 * Asset Share Commons sharing capability
 * etc.
 
+<!-- CLOUD-SERVICE_INSTRUCTIONS -->
+
 <!-- QUICKSTART_INSTRUCTIONS -->
+
+<!-- 65_INSTRUCTIONS -->
+

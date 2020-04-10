@@ -1,11 +1,8 @@
-**Adobe Asset Link is in limited released and thus subject to change.
-
-Please review the Adobe Asset Link Pre-release site for the latest details <a href="https://www.adobeprerelease.com/beta/12CD68B7-238C-47F0-A211-C86DCFB57145" target="_blank">Adobe Asset Link pre-release site</a>.**
 
 <iframe title="Adobe Video Publishing Cloud Player" width="854" height="480" src="https://video.tv.adobe.com/v/21718/?quality=12&autoplay=false&hidetitle=true&marketingtech.adobe.analytics.additionalAccounts=tmdtmdaemdemoutilsprod" frameborder="0" webkitallowfullscreen 
 mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
-> Watch a quick video on the Adobe Asset Link v1.1 integration with InDesign CC.
+> Watch a quick video on the Adobe Asset Link integration with InDesign CC.
 > Note this integration currently requires a pre-release version of InDesign CC 2020.
 
 <iframe title="Adobe Video Publishing Cloud Player" width="854" height="480" src="https://video.tv.adobe.com/v/28988/?quality=12&autoplay=false&hidetitle=true&marketingtech.adobe.analytics.additionalAccounts=tmdtmdaemdemoutilsprod" frameborder="0" webkitallowfullscreen
@@ -13,26 +10,22 @@ mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
 ---
 
-## One-time local machine set up
+### Changes from Adobe Asset Link 1.x to 2.x
 
-The installation of the Adobe Extension and `assetlink-settings.json` setup only needs to be performed once per the life of the machine.
+* `assetlink-settings.json` is no longer needed to specify the AEM Author instance. You can now specify AEM Authors instances in the Asset Link 2.x Extension panel directly, i.e. `http://localhost:4502`
+* You can setup multiple AEM Author connections in Asset Link, and toggle between them, in the CC App.
+* To demo, you still need to use the Extension Manager and `.zxp` file, however real customers deploy the Adobe Asset Link extension by configuring it to be included in the CC App their employees will download (via adminconsole.adobe.com)
+
+---
+ 
+## One-time local machine (CC App) set up
+ 
+The installation of the Adobe Extension only needs to be performed once per the life of the machine.
 
 <ol>
     <li>Download and install the Extension Manager application from <a href="https://install.anastasiy.com"   x-cq-linkchecker="skip" target="_blank" >https://install.anastasiy.com</a>.
     <li>Download the Adobe Asset Link extension (<a href="https://link.enablementadobe.com/asset-link-zxp"  x-cq-linkchecker="skip" target="_blank">com.adobe.assetlink.zxp</a>) to your computer.
     <li>Open the Extension Manager application, click Install and select <code>com.adobe.assetlink.zxp</code>. Install the extension.
-    <li>Download the extension configuration file (<a href="https://link.enablementadobe.com/assetlink-settings"  x-cq-linkchecker="skip" target="_blank">assetlink-settings.json</a>).
-        <ul>
-            <li>If AEM is running on a something other than http://localhost:4502, edit this file and update the values accordingly.</li>
-        </ul>
-    </li/>
-    <li>Copy <code>assetlink-settings.json</code> to ..
-        <ul>
-            <li>macOS: <code>/Users/YOUR_USER/Library/Application Support/Adobe/CEP/extensions</code><br/>
-                Example terminal command: <code>cd ~/Downloads && cp assetlink-settings.json ~/Library/Application\ Support/Adobe/CEP/extensions</code>
-            <li>Windows: <code>%APPDATA%/Adobe/CEP/extensions</code>
-        </ul>
-    </li>
 </ol>
 
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->
@@ -55,7 +48,7 @@ To use FPO asset renditions in InDesign CC via Adobe Asset Link, you must re-pro
 
 * AEM > Assets > Files > Select folders or assets to re-process > Create > Workflow > DAM Update Asset workflow
 
-## Using the Integration
+## Using the integration
 
 1. Open Adobe Photoshop, Illustrator or InDesign.
 2. Go to Window > Extensions
@@ -66,6 +59,7 @@ To use FPO asset renditions in InDesign CC via Adobe Asset Link, you must re-pro
 
 * [Adobe Asset Link Demo](https://internal.adobedemo.com/content/demo-hub/en/demos/external/europa-creative-cloudinappexperience.html)
 * [Adobe Asset Link Demo Video (#2)](https://www.adobe.com/marketing/experience-manager-assets/adobe-asset-link.html)
+
 ## Other materials
 
 * [Adobe Asset Link Docs](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)

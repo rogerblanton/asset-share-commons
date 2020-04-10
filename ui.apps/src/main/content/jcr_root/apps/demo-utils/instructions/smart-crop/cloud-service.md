@@ -1,4 +1,4 @@
-## Smart Crop Demo
+## Smart Crop demo
 
 1. Ensure that you have completed the steps to [Set up Dynamic Media](/apps/demo-utils/instructions/dynamic-media.html) **before** proceeding. (Sorry if you came here first!)
 2. Navigate to the Image Profile Page: **Tools** > **Assets** > **<a href="/mnt/overlay/dam/gui/content/processingprofilepage/imageprocessingprofiles.html/conf/global/settings/dam/adminui-extension/imageprofile" target="_blank">Image Profiles</a>**

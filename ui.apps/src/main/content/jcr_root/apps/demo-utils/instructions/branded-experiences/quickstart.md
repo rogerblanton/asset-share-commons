@@ -5,4 +5,4 @@
 
 Visit the [Branded Experiences demo.adobe.com page](https://internal.adobedemo.com/content/demo-hub/en/demos/external/branded-experiences.html) for the latest instructions and installers.
 
-*Note that Branded Experiences ONLY works on the local AEM as a Cloud Service Quickstart Jar (which you are on now) and NOT on a true AEM as a Cloud Service enviroment (in the Adobe Cloud).*
+*Note that Branded Experiences ONLY works on the local AEM as a Cloud Service Quickstart Jar (which you are on now) and NOT on a true AEM as a Cloud Service environment (in the Adobe Cloud).*
