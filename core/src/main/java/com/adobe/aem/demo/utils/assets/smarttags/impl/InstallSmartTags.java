@@ -176,7 +176,6 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
     private void setupIndexes(ResourceResolver resourceResolver) throws PersistenceException {
         Resource luceneIndex = resourceResolver.getResource("/oak:index/lucene");
         ModifiableValueMap luceneProperties = luceneIndex.adaptTo(ModifiableValueMap.class);
-
         luceneProperties.put("costPerEntry", Double.valueOf(2));
         luceneProperties.put("costPerExecution", Double.valueOf(2));
         luceneProperties.put("refresh", true);
