@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.aem.demo</groupId>
         <artifactId>com.adobe.aem.demo.all-demos</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>2020.04.16</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -54,7 +54,7 @@
                     <packageType>application</packageType>
                     <accessControlHandling>merge</accessControlHandling>
                     <properties>
-                        <cloudManagerTarget>none</cloudManagerTarget>>
+                        <cloudManagerTarget>none</cloudManagerTarget>&gt;
                     </properties>
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
