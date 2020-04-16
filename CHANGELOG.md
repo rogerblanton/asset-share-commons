@@ -9,6 +9,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com)
 <!-- Keep this up to date! After a release, change the tag name to the latest release -->
 [unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
 
+## [2020.04.10]
+
+### Added
+- Added AEM 6.5.4+ instructions back into the Project
+- Added Brand Portal Adobe I/O set up support for AEM 6.5.x
+- Added Adobe Asset Link 2.0 instructions
+
+### Fixes
+- Minor fixes and corrections in instructions
+
 ## [2020.03.06]
 
 ### Fixed
