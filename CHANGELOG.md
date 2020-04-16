@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com)
 <!-- Keep this up to date! After a release, change the tag name to the latest release -->
 [unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
 
+## [2020.04.16]
+
+- Fixed issue with Brand Portal Tenant URL setup being incorrect
+- Fixed issue with Asset Link 2.0 set up button not appearing for AEM 6.5
+
 ## [2020.04.10]
 
 ### Added
