@@ -46,6 +46,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <scm>
+        <connection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.all-demos.git</connection>
+        <developerConnection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.all-demos.git</developerConnection>
+        <tag>com.adobe.aem.demo.all-demos-2020.01.01</tag>
+    </scm>
+
     <build>
         <plugins>
             <!-- Maven Release Plugin -->
