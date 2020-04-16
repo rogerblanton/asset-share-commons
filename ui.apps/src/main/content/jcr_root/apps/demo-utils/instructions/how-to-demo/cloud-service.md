@@ -22,6 +22,7 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Assets | Adobe Stock integration | ✘ | ✘ |
 | Assets | Connected Assets | ✘ | ✘ |
 | Assets | Desktop App | ✔ | ✔ |
+| Assets | Brand Portal | ✔ | ✔ |
 | Assets | Smart Tags | ✔ | ✔ |
 | Assets | Visual Search | ✘ | ✘ |
 | Assets - Dynamic Media | Basic functionality | ✘ | ✘ |
@@ -49,7 +50,6 @@ The ETA column in the table below gives a rough indicator when features might be
 | Assets | 2020 | Assets Catalogs (Commerce & InDesign Server integration)) |
 | Assets | 2020 | Assets microservices (Custom workers) |
 | Assets | 2020 | Assets Templates (InDesign Server integration) |
-| Assets | 2020 | Brand Portal |
 | Assets | 2020 | InDesign Server integration |
 | Assets | 2020 | Photoshoot Project (AEM Projects) |
 | Assets | 2020 | Imagemagick, FFMPEG, and all other command-line Workflow steps |

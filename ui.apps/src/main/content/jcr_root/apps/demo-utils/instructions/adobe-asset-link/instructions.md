@@ -32,6 +32,8 @@ The installation of the Adobe Extension only needs to be performed once per the 
 
 <!-- QUICKSTART_INSTRUCTIONS -->
 
+<!-- 65_INSTRUCTIONS -->
+
 ## FPO placement in InDesign CC
 
 FPO placement in InDesign CC required the pre-released InDesign CC 2020 release.

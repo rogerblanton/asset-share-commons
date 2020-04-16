@@ -236,7 +236,7 @@ public class InstallBrandPortal extends AbstractExecutable implements Executable
         final Map<String, String[]> requestParams = ImmutableMap.<String, String[]>builder().
                 put("item", new String[]{""}).
                 put("name", new String[]{"Brand Portal (" + region.toUpperCase() + ")"}).
-                put("tenantURL", new String[]{ "https://bpdemon" + region + ".brand-portal.adobe.com" }).
+                put("tenantURL", new String[]{ "https://bpdemo" + region + ".brand-portal.adobe.com" }).
                 put("pubFolder", new String[]{ "" }).
                 put("oauthScopes", new String[]{ "dam-read dam-write dam-sync cc-share" }).
                 put("imsConfig", new String[]{accessTokenConfigId}).

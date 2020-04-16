@@ -35,6 +35,11 @@
     <label for="dynamic-media-scene7">Dynamic Media</label>
 </dd>
 
+<dd>
+    <br/>
+    <label for="brand-portal">Visit the <a x-cq-linkchecker="skip" href="/apps/demo-utils/instructions/brand-portal.html">Brand Portal demo page</a> for automatic set up by geography</label>
+</dd>
+
 <dt><h4>Automatic actions</h4></dt>
 
 <dd>

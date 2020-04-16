@@ -111,7 +111,7 @@ Because of this, the guidance for demo'ing asset sourcing is to use hosted AEM A
 </table>
 
 ## Manual set up
-s
+
 The Demo Shared Brand Portal instances can be set up manually to integrate with AEM following the instructions on Adobe Documentation.
 
 The divergence from Adobe Docs is that Demo Utils provides pre-configured Keystore to install ito AEM that have been setup in Adobe Console to allow AEM to talk to Brand Portal. 
@@ -131,10 +131,10 @@ The divergence from Adobe Docs is that Demo Utils provides pre-configured Keysto
 | Brand Portal Env to connect to | New Alias | Keystore file | Keystore File Password | Private Key Alias | Private Key Password | 
 |--------------------------------|-----------|---------------|------------------------|-------------------|----------------------|
 | NA1   | demo-utils_brand-portal_na1 | [brand-portal-bpdemona1-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona1/brand-portal-bpdemona1-keystore.p12) | demo | demo-utils_brand-portal_na1  | demo | 
-| NA2   | demo-utils_brand-portal_na2 | [brand-portal-bpdemona2-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona2/brand-portal-bpdemona1-keystore.p12) | demo | demo-utils_brand-portal_na2  | demo | 
-| EMEA1 | demo-utils_brand-portal_emea1 | [brand-portal-bpdemoemea1-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona1/brand-portal-bpdemoemea1-keystore.p12) | demo | demo-utils_brand-portal_emea1 | demo | 
-| EMEA1 | demo-utils_brand-portal_emea2 | [brand-portal-bpdemoemea2-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona2/brand-portal-bpdemoemea2-keystore.p12) | demo | demo-utils_brand-portal_emea2 | demo | 
-| APAC | demo-utils_brand-portal_apac | [brand-portal-bpdemoapac-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona2/brand-portal-bpdemoapac-keystore.p12) | demo | demo-utils_brand-portal_apac | demo | 
+| NA2   | demo-utils_brand-portal_na2 | [brand-portal-bpdemona2-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemona2/brand-portal-bpdemona2-keystore.p12) | demo | demo-utils_brand-portal_na2  | demo | 
+| EMEA1 | demo-utils_brand-portal_emea1 | [brand-portal-bpdemoemea1-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemoemea1/brand-portal-bpdemoemea1-keystore.p12) | demo | demo-utils_brand-portal_emea1 | demo | 
+| EMEA1 | demo-utils_brand-portal_emea2 | [brand-portal-bpdemoemea2-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemoemea2/brand-portal-bpdemoemea2-keystore.p12) | demo | demo-utils_brand-portal_emea2 | demo | 
+| APAC | demo-utils_brand-portal_apac | [brand-portal-bpdemoapac-keystore.p12](/apps/demo-utils/resources/brand-portal/bpdemoapac/brand-portal-bpdemoapac-keystore.p12) | demo | demo-utils_brand-portal_apac | demo | 
 
 1. Tap the __Submit__ button
 1. Tap __Save and Close__ in the upper-right

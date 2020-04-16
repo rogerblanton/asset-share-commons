@@ -21,16 +21,19 @@
     <label for="smart-tags">Smart Tags</label>
 </dd>
 
-
 <dd>
     <input type="checkbox" id="adobe-asset-link" name="adobe-asset-link" value="install"/>
     <label for="adobe-asset-link">Adobe Asset Link <em>(requires <a  x-cq-linkchecker="skip"  href="/apps/demo-utils/instructions/adobe-asset-link.html">one-time Adobe Extension installation</a>)</em></label>
 </dd>
 
-
 <dd>
     <input type="checkbox" id="dynamic-media-scene7" name="dynamic-media-scene7" value="install"/>
     <label for="dynamic-media-scene7">Dynamic Media</label>
+</dd>
+
+<dd>
+    <br/>
+    <label for="brand-portal">Visit the <a x-cq-linkchecker="skip" href="/apps/demo-utils/instructions/brand-portal.html">Brand Portal demo page</a> for automatic set up by geography</label>
 </dd>
 
 <dt><h4>Automatic actions</h4></dt>
