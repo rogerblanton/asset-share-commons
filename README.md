@@ -56,3 +56,26 @@ There are three levels of testing contained in the project:
 The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
 
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
+
+
+## Release
+
+Generate the zip file for All Demos and replace the existing AEM Package with the latest version :
+
+```
+https://dhauthor1.adobedemo.com/assets.html/content/dam/demo-hub/demos/aem-all-demos/assets/
+```
+
+1. Upload and then publish the latest package
+2. Unpublish the prior package
+
+Update and Publish All Demos Page Properties
+
+```
+https://dhauthor1.adobedemo.com/editor.html/content/demo-hub/en/demos/external/aem-all-demos.html```
+
+* Page Properties > Demo Hub Configuration Tab > Page Update Date
+    * Set to "today"
+* Page Properties > Basic > Title
+    * Set to "AEM All Demos <latest version>
+
