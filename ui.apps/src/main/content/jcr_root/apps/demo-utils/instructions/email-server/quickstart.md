@@ -24,5 +24,5 @@ In the event you need to manually set up the AEM Mail service, this can be done 
 + SMTP use SSL: `true`
 + SMTP use StartTLS: `false`
 + Debug email: `false`
-3. Tap _Save__ 
+3. Tap __Save__ 
 4. Now go have AEM send some e-mails!
