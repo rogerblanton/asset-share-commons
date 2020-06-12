@@ -45,8 +45,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.all-demos.git</connection>
-        <developerConnection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.all-demos.git</developerConnection>
+        <connection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.demo-utils.git</connection>
+        <developerConnection>scm:git:git@git.corp.adobe.com:aem-technical-marketing/com.adobe.aem.demos.demo-utils.git</developerConnection>
         <tag>com.adobe.aem.demo.demo-utils-2020.04.16</tag>
     </scm>
 
