@@ -4,8 +4,6 @@ AEM as a Cloud Service Sandbox accounts are provisioned with IMS organisations t
 
 To activate Federated IDs in your IMS organisation:
 
-![Admin console](./images/admin-console.png)
-
 1. Go to [https://adminconsole.adobe.com/](https://adminconsole.adobe.com/)
 2. Under __Settings → Identity → Domains__, tap on "Add Domains" and enter `adobe.com` to request access to the domain for your account
 3. Wait for your request to get approved (This could day hours to days).

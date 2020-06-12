@@ -176,7 +176,7 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
         params.put("password", "nC:6UA:o8");
         params.put("password@Encrypted", "true");
         params.put("previewServer", "https://preview1.assetsadobe.com");
-        params.put("publishEnabled", "off");
+        params.put("publishEnabled", "selective");
         params.put("publishServer", "http://s7d1.scene7.com");
         params.put("region", "northamerica-enterprise");
         params.put("rootPath", "DynamicmediaNA1/");

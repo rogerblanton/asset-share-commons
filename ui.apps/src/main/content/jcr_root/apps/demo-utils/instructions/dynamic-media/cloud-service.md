@@ -1,7 +1,5 @@
 <div class="unsupported">
-Parts of Dynamic Media currently do not work on AEM as a Cloud Service due to bugs.
-
-Known areas that currently do NOT work include: Viewers, including 360/VR, Preview artwork
+Several Dynamic Media previews (Tools > Assets) may have issues rendering. Please double check that any preview under Tools > Assets works prior to showing it!
 </div>
 
 ### Automatic Cloud Set up
@@ -26,11 +24,25 @@ Click the button below to automatically set up the Dynamic Media Cloud Service.
     * Company: **DynamicMediaNA**
     * Company Root Folder Path: **DynamicMediaNA/**
         * *Do **not** change this value.*
-    * Publish Assets: **Immediately**
+    * Publish Assets: **Selective**
     * Secure Preview Server: **https://preview1.assetsadobe.com**
         * *Do **not** change this value.*
 
     ![Cloud Config](./dynamic-media/images/cloud-config.png)
+
+#### Troubleshooting permissions
+
+If you are unable to create Presets or Viewers, it is likely you do not have the property permissions on your AEM as a Cloud Service Author.
+To resolve this, add yourself to the `administrators` user group in AEM.
+
+1. Log in to AEM as a Cloud Service AEM Author instance using your Adobe ID
+    + Note that you MUST be in the AEM Administrators Product Profile for your AEM Author, otherwise you will not be able to self-administer permissions
+1. Tools > Security > Groups
+1. Locate the `administrators` group and tap on its title
+1. Tap the Members tab
+1. Add your user to the as a member of the `administrators` group
+1. Tap Save and Close, and try again
+
 
 #### Special instructions
 

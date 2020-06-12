@@ -228,7 +228,6 @@ public class MockPerformanceDataServlet extends SlingSafeMethodsServlet {
 
     }
 
-
     @ObjectClassDefinition(name = "AEM Demo Utils - Asset Insights - Mock Performance Data")
     public @interface Cfg {
         @AttributeDefinition(

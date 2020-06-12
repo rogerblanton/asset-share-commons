@@ -11,11 +11,11 @@ For more complete lists including bug-fix and roadmap status please review the f
 
 ### Supported features
 
-The following are features that are intended to work on AEM as a Cloud Service (note, that some may be broken on both AEM as a Cloud Service and Quickstart Jar at this time, but these are unplanned bugs).
+The following are features that are intended to work on AEM as a Cloud Service (note, that some may not work on both AEM as a Cloud Service and Quickstart Jar at this time, but these are unplanned bugs).
 
-|      | Feature | AEM as a Cloud Service | Quickstart Jar |
+|      | Feature | AEM as a Cloud Service | AEM SDK Quickstart Jar |
 |------|---------|------------------------|----------------|
-| Assets | Adobe Asset Link | ✘ | ✘ |
+| Assets | Adobe Asset Link | ✔ | ✔ |
 | Assets | Asset Insights | ✔ | ✔ |
 | Assets | Assets microservices (OOTB workers) | ✔ | ✘ |
 | Assets | Asset Share Commons | ✔ | ✔ |
@@ -24,11 +24,11 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Assets | Desktop App | ✔ | ✔ |
 | Assets | Brand Portal | ✔ | ✔ |
 | Assets | Smart Tags | ✔ | ✔ |
-| Assets | Visual Search | ✘ | ✘ |
-| Assets - Dynamic Media | Basic functionality | ✘ | ✘ |
+| Assets | Visual Search | ✔ | ✔ |
+| Assets - Dynamic Media | Basic functionality | ✔ | ✔ |
 | Assets - Dynamic Media | Image Smart Crop | ✔ | ✔ |
 | Assets - Dynamic Media | Video Smart Crop | ✘ | ✘ |
-| Assets - Dynamic Media | 360/VR video | ✘ | ✘ |
+| Assets - Dynamic Media | 360/VR video | ✔ | ✔ |
 | Sites | Core Components Showcase | ✔ | ✔ |
 | Sites | Hybrid CMS Demo | ✘ | ✘ |
 | Sites | WKND Site | ✔ | ✔ |
@@ -50,9 +50,8 @@ The ETA column in the table below gives a rough indicator when features might be
 | Assets | 2020 | Assets Catalogs (Commerce & InDesign Server integration)) |
 | Assets | 2020 | Assets microservices (Custom workers) |
 | Assets | 2020 | Assets Templates (InDesign Server integration) |
-| Assets | 2020 | InDesign Server integration |
+| Assets | 2020 | InDesign Server integration (replacement w/ parity microservices) |
 | Assets | 2020 | Photoshoot Project (AEM Projects) |
-| Assets | 2020 | Imagemagick, FFMPEG, and all other command-line Workflow steps |
 | Assets | 2020 | Smart Tags Training (aka Enhanced Smart Tags) |
 | Assets | TBD  | Smart Translation Search |
 | Assets | TBD  | Assets HTTP API *(for write operations)* |

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="AEM Assets - Integrate AEM Assets directly with Adobe Creative Cloud apps"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="3D Assets"
+    href="/apps/demo-utils/instructions/3d.html"
+    icon="dimension"
+    id="aem-demo-utils__assets-3d"
+    target="_blank"/>
