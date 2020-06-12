@@ -38,6 +38,7 @@
     <cloud-manager />
 
     <!-- Not available in AEM as a Cloud Service -->
+    <cif-magento/>
     <forms/>
     <brand-portal/>
     <smart-translation-search/>
