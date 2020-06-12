@@ -20,7 +20,7 @@ $ mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
 ```
 ###
 
-Deploy the packages to aem.enablemebtadobe.com/maven
+Deploy the packages to aem.enablementadobe.com/maven
 
 ```
 // Demo Utils
