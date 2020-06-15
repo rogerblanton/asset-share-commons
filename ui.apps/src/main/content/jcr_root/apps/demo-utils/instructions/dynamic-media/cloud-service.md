@@ -1,6 +1,3 @@
-<div class="unsupported">
-Several Dynamic Media previews (Tools > Assets) may have issues rendering. Please double check that any preview under Tools > Assets works prior to showing it!
-</div>
 
 ### Automatic Cloud Set up
 

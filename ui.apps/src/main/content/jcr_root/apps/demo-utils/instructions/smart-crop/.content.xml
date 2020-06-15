@@ -3,7 +3,7 @@
           jcr:primaryType="sling:Folder"
           sling:resourceType="demo-utils/instructions/smart-crop"
           sling:resourceSuperType="demo-utils/components/base"
-          jcr:title="Smart Crop"
+          jcr:title="Smart Crop Image &amp; Video"
           subProducts="[AEM Assets + Dynamic Media]"
           cloudService="cloud-service"
           cloudServiceQuickstart="quickstart"

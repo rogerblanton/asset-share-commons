@@ -45,4 +45,5 @@ To demo:
 * [Single Page Application - Developer User Guide](https://helpx.adobe.com/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/spa.ug.js)
 
 ### Spa Editor Demo Source Code (Adobe Internal only)
+
 * [https://git.corp.adobe.com/aem-technical-marketing/demo-spa-editor](https://git.corp.adobe.com/aem-technical-marketing/demo-spa-editor)

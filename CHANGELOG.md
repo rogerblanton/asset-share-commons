@@ -9,6 +9,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com)
 <!-- Keep this up to date! After a release, change the tag name to the latest release -->
 [unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
 
+## [2020.06.15]
+
+### Added
+
++ Add 3D Assets instructions
++ Add Commerce/AEM + Magento instructions 
++ Added Smart Crop for Video to Smart Crop instructions
+
+### Changed
+
++ Update "Coming Soon" features 
++ Update Smart Tags video in instructions
++ Remove Dynamic Media support warning in instructions
++ Updated Mail Service to be Secret for auto-install (Manual and auto used different keys now)
+
+### Fixed
+
++ Fixed Oak Index definition for AEM as a Cloud Service deployment support
++ Fixed /var/workflow models for AEM as a Cloud Service deployment support
+
 ## [2020.04.16]
 
 - Fixed issue with Brand Portal Tenant URL setup being incorrect

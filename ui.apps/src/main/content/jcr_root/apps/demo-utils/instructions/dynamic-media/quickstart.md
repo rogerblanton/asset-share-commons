@@ -1,10 +1,5 @@
-<div class="unsupported">
-Parts of Dynamic Media currently do not work on AEM as a Cloud Service due to bugs.
 
-Known areas that currently do NOT work include: Viewers, including 360/VR, Preview artwork
-</div>
-
-*Note that Dynamic Media run mode is always enabled for the local Quickstart Jar, so there is no need to rename the Jar file to enable Dynamic Media.*
+*Note that Dynamic Media run mode is always enabled for the AEM SDK Quickstart Jar, so there is no need to rename the Jar file to enable Dynamic Media.*
 
 ## Automatic Local Set up
 

@@ -1,7 +1,3 @@
-<div class="unsupported">
-    The Adobe Stock integration's Cloud Service is removed every time a deployment (updating the AEM version, or deploying update code) is made to the AEM as a Cloud Service environment.
-</div>
-
 ## Cloud Set up
 
 This set up uses the AEM Technical Marketing team's Enterprise Adobe Stock account. Please be aware of this accounts licensing access on Adobe Stock:

@@ -22,13 +22,13 @@ Enterprise businesses are increasingly looking to use 3D assets in marketing exp
 
 | Format | Type | Description | Download | Preview |
 |--------|------|-------------|----------|---------|
-| gLB, USDz | model | Armchair with wood, leather, and brass material | [Download](https://link.enablementadobe.com/3d-model-armchair) | ![Armchair](./images/armchair.png) |
-| gLB, USDz | model | Running Shoe | [Download](https://link.enablementadobe.com/3d-model-shoe) | ![Running Shoe](./images/shoe.png) |
-| OBJ, gLB, DN | model, scene | Hot-rod engine block with blower & headers | [Download](https://link.enablementadobe.com/3d-model-engine) | ![Engine](./images/engine.png) |
-| gLB, USDz, DN | model, scene | Race car | [Download](https://link.enablementadobe.com/3d-model-sports-car) | ![Sports car](./images/car.png) |
-| gLB, USDz, DN | model, scene | Soda can | [Download](https://link.enablementadobe.com/3d-model-pop-can) | ![Soda can](./images/can.png) |
-| sbsar | material | Substance material - Leather | [Download](https://link.enablementadobe.com/3d-model-leather-texture) | ![Leather](./images/leather.png) |
-| sbsar | material | Substance material - American Walnut | [Download](https://link.enablementadobe.com/3d-model-walnut-texture) | ![American walnut](./images/walnut.png) |
+| gLB, USDz | model | Armchair with wood, leather, and brass material | [Download](https://link.enablementadobe.com/3d-model-armchair) | ![Armchair](./3d/images/armchair.png) |
+| gLB, USDz | model | Running Shoe | [Download](https://link.enablementadobe.com/3d-model-shoe) | ![Running Shoe](./3d/images/shoe.png) |
+| OBJ, gLB, DN | model, scene | Hot-rod engine block with blower & headers | [Download](https://link.enablementadobe.com/3d-model-engine) | ![Engine](./3d/images/engine.png) |
+| gLB, USDz, DN | model, scene | Race car | [Download](https://link.enablementadobe.com/3d-model-sports-car) | ![Sports car](./3d/images/car.png) |
+| gLB, USDz, DN | model, scene | Soda can | [Download](https://link.enablementadobe.com/3d-model-pop-can) | ![Soda can](./3d/images/can.png) |
+| sbsar | material | Substance material - Leather | [Download](https://link.enablementadobe.com/3d-model-leather-texture) | ![Leather](./3d/images/leather.png) |
+| sbsar | material | Substance material - American Walnut | [Download](https://link.enablementadobe.com/3d-model-walnut-texture) | ![American walnut](./3d/images/walnut.png) |
 
 You can also get free materials from [https://source.substance3d.com/](https://source.substance3d.com/) and free models from [https://stock.adobe.com/3D-assets](https://stock.adobe.com/3D-assets)
 

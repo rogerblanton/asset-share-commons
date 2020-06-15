@@ -4,6 +4,7 @@ import com.adobe.aem.demo.utils.Executable;
 import com.adobe.aem.demo.utils.assets.smarttranslationsearch.impl.SmartTranslationSearch;
 import com.adobe.aem.demo.utils.impl.AbstractExecutable;
 import com.adobe.aem.demo.utils.impl.Constants;
+import com.adobe.aem.demo.utils.impl.RequireAem;
 import com.day.cq.commons.jcr.JcrConstants;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -12,6 +13,7 @@ import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +21,6 @@ import javax.servlet.Servlet;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 
 @Component(service = {Servlet.class, Executable.class},
         property = {
@@ -35,6 +36,9 @@ public class VisualSearch extends AbstractExecutable {
 
     private static final String LUCENE_INDEX_PATH = "/oak:index/lucene";
     private static final String DAM_ASSET_LUCENE_INDEX_PATH = "/oak:index/damAssetLucene";
+
+    @Reference
+    private RequireAem requireAem;
 
     @Override
     public String getName() {
@@ -56,8 +60,11 @@ public class VisualSearch extends AbstractExecutable {
         final ResourceResolver resourceResolver = request.getResourceResolver();
 
         // Automates this setup: https://helpx.adobe.com/experience-manager/6-5/assets/using/search-assets.html#configvisualsearch
-        updateDamAssetLuceneOakIndex(resourceResolver);
-        updateLuceneOakIndex(resourceResolver);
+        if (requireAem.is65() || requireAem.isAemSdk()) {
+            updateDamAssetLuceneOakIndex(resourceResolver);
+            updateLuceneOakIndex(resourceResolver);
+        }
+
         syncAssetsSearchForm(resourceResolver);
 
         if (resourceResolver.hasChanges()) {
