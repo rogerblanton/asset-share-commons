@@ -19,15 +19,15 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Assets | Asset Insights | ✔ | ✔ |
 | Assets | Assets microservices (OOTB workers) | ✔ | ✘ |
 | Assets | Asset Share Commons | ✔ | ✔ |
-| Assets | Adobe Stock integration | ✘ | ✘ |
-| Assets | Connected Assets | ✘ | ✘ |
+| Assets | Adobe Stock integration | ✔ | ✔ |
+| Assets | Connected Assets | ✔ | ✔ |
 | Assets | Desktop App | ✔ | ✔ |
 | Assets | Brand Portal | ✔ | ✔ |
 | Assets | Smart Tags | ✔ | ✔ |
 | Assets | Visual Search | ✔ | ✔ |
 | Assets - Dynamic Media | Basic functionality | ✔ | ✔ |
 | Assets - Dynamic Media | Image Smart Crop | ✔ | ✔ |
-| Assets - Dynamic Media | Video Smart Crop | ✘ | ✘ |
+| Assets - Dynamic Media | Video Smart Crop | ✔ | ✔ |
 | Assets - Dynamic Media | 360/VR video | ✔ | ✔ |
 | Sites | Core Components Showcase | ✔ | ✔ |
 | Sites | Hybrid CMS Demo | ✘ | ✘ |
@@ -47,12 +47,11 @@ The ETA column in the table below gives a rough indicator when features might be
 |        | ETA  | Feature |
 |--------|------|---------|
 | All    | TBD    | User generated content on AEM Publish (no writes to AEM Publish) |
+| Assets | July 2020 | Assets microservices (Custom workers) |
 | Assets | 2020 | Assets Catalogs (Commerce & InDesign Server integration)) |
-| Assets | 2020 | Assets microservices (Custom workers) |
 | Assets | 2020 | Assets Templates (InDesign Server integration) |
 | Assets | 2020 | InDesign Server integration (replacement w/ parity microservices) |
 | Assets | 2020 | Photoshoot Project (AEM Projects) |
-| Assets | 2020 | Smart Tags Training (aka Enhanced Smart Tags) |
 | Assets | TBD  | Smart Translation Search |
 | Assets | TBD  | Assets HTTP API *(for write operations)* |
 | Assets | TBD  | YouTube publishing |
@@ -61,7 +60,7 @@ The ETA column in the table below gives a rough indicator when features might be
 | Commerce | 2020 | Currently not supported |
 | Communities | TBD | Currently not supported |
 | Screens | 2020 | Not supported |
-| Forms | ~2020 | Not Supported; [See details](https://wiki.corp.adobe.com/display/WEM/AEM+Forms+Services+and+Skyline) |
+| Forms | 2020 | Not Supported; [See details](https://wiki.corp.adobe.com/display/WEM/AEM+Forms+Services+and+Skyline) |
 
 ## FAQs
 
