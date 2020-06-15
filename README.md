@@ -15,6 +15,7 @@ The release of AEM Demo Utils is manual and the artifacts are not deployed to an
 The release versions do NOT follow semantic versioning, rather the version is the YYYY.MM.DD of release.
 
 ```
+$ mvn versions:set -DnewVersion=2020.06.14-SNAPSHOT
 $ mvn release:prepare
 $ mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
 ```
