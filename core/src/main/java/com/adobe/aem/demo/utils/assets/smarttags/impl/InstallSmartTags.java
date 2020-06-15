@@ -14,7 +14,6 @@ import com.adobe.granite.workflow.model.WorkflowModel;
 import com.adobe.granite.workflow.model.WorkflowNode;
 import com.adobe.granite.workflow.model.WorkflowTransition;
 import com.google.common.collect.ImmutableMap;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.api.JackrabbitSession;
