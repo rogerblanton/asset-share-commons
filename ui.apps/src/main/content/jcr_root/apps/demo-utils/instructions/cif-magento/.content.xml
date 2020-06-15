@@ -3,7 +3,7 @@
           jcr:primaryType="sling:Folder"
           sling:resourceType="demo-utils/instructions/cif-magento"
           sling:resourceSuperType="demo-utils/components/base"
-          jcr:title="CIF - Commerce Inegration Framework"
+          jcr:title="CIF - Commerce Integration Framework"
           subProducts="[AEM Sites]"
           cloudService="cloud-service"
           cloudServiceQuickstart="quickstart"
