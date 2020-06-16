@@ -9,4 +9,15 @@ public interface VersionMetadata {
      */
     String getUtilsVersion();
 
+    default String getAemType() { return "unknown"; }
+
+    default String getFullVersion() { return "unknown"; }
+
+    default String getMajorVersion() { return "unknown"; }
+
+    default String getMinorVersion() { return "unknown"; }
+
+    default String getMicroVersion() { return "unknown"; }
+
+    default String getQualifierVersion() { return "unknown"; }
 }

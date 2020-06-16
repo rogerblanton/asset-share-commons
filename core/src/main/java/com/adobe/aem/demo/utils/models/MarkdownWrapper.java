@@ -15,5 +15,4 @@ MarkdownWrapper {
     String getCloudServiceQuickstartInstructions();
 
     String get65Instructions();
-
 }

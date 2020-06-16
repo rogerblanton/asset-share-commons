@@ -6,7 +6,7 @@ import org.osgi.framework.Version;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component
+@Component(service = RequireAem.class)
 public class RequireAem {
     public static final Version ORIGINAL_CLOUD_SERVICE_VERSION = new Version(2019, 12,   0);
 

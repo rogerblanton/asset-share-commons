@@ -1,5 +1,6 @@
 package com.adobe.aem.demo.utils.models.impl;
 
+import com.adobe.aem.demo.utils.impl.RequireAem;
 import com.adobe.aem.demo.utils.models.MarkdownWrapper;
 import com.adobe.granite.license.ProductInfoProvider;
 import org.apache.commons.lang3.ArrayUtils;
@@ -57,6 +58,9 @@ public class MarkdownWrapperImpl implements MarkdownWrapper {
     @OSGiService
     private ProductInfoProvider productInfoProvider;
 
+    @OSGiService
+    private RequireAem requireAem;
+
     @PostConstruct
     private void init() {
         resource = request.getResource();
@@ -113,6 +117,7 @@ public class MarkdownWrapperImpl implements MarkdownWrapper {
         return "";
     }
 
+    @Override
     public String getInstructions() {
         String instructions = getInstructions("instructions.md");
 
