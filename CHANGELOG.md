@@ -9,7 +9,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com)
 <!-- Keep this up to date! After a release, change the tag name to the latest release -->
 [unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
 
-## [2020.06.15]
+
+## [2020.06.18]
+
+### Fixed
+
++ Removed /var nodes (should have been removed in 2016.06.16)
+
+
+## [2020.06.17]
+
+### Added
+
++ Added internal tracking of AEM version used
+
+## [2020.06.16]
 
 ### Added
 
