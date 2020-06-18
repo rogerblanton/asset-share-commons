@@ -4,6 +4,7 @@ import com.adobe.aem.demo.utils.impl.WorkflowModelCopier;
 import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ import javax.jcr.RepositoryException;
 import java.util.Collections;
 import java.util.Map;
 
-@Component(immediate = true)
+@Component(immediate = true, configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class AssetInsightsWorkflowCopier {
     private static final Logger log = LoggerFactory.getLogger(AssetInsightsWorkflowCopier.class);
     private static final String SERVICE_ACCOUNT_IDENTIFIER = "aem-demo-utils";
