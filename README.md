@@ -20,9 +20,9 @@ $  mvn clean package -Dbnd.baseline.skip=true
 ```
 
 ```
-$ mvn versions:set -DnewVersion=2020.06.14-SNAPSHOT
-$ mvn release:prepare
-$ mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
+mvn versions:set -DnewVersion=2020.06.18-SNAPSHOT
+mvn release:prepare
+mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
 ```
 ###
 
