@@ -35,7 +35,7 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Sites | WKND App (SPA Editor) | ✔ | ✔ |
 | Content Services | Content Fragment HTTP API (read-only) | ✔ | ✔ |
 | Content Services | WKND Mobile (AEM Headless) | ✔ | ✔ |
-| All  | Ability to send e-mails from AEM | ✘ | ✔ |
+| All  | Ability to send e-mails from AEM (Available Soon) | ✘ | ✔ |
 
 ### Unsupported and Roadmap Features
 
