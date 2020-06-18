@@ -32,7 +32,7 @@ public class AssetInsightsWorkflowCopier {
             if (serviceResolver != null) {
                 // Do some work w your service resource resolver
                 Resource source = serviceResolver.getResource("/apps/demo-utils/resources/asset-insights/generate-asset-insights");
-                WorkflowModelCopier.copyToVarWorkflows(source);
+                WorkflowModelCopier.copyToVarWorkflows("Generate Asset Insights", source);
                 serviceResolver.commit();
             } else {
                 log.error("Could find the service user to copy Demo Utils - Assets Insights Workflow Model to the runtime location");

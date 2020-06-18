@@ -31,8 +31,8 @@ public class GenerateTasksWorkflowCopier {
         try (ResourceResolver serviceResolver = resourceResolverFactory.getServiceResourceResolver(authInfo)) {
             if (serviceResolver != null) {
                 // Do some work w your service resource resolver
-                Resource source = serviceResolver.getResource("/apps/demo-utils/resources/asset-insights/generate-tasks");
-                WorkflowModelCopier.copyToVarWorkflows(source);
+                Resource source = serviceResolver.getResource("/apps/demo-utils/resources/tasks/generate-tasks");
+                WorkflowModelCopier.copyToVarWorkflows("Generate Tasks", source);
                 serviceResolver.commit();
             } else {
                 log.error("Could find the service user to copy Demo Utils - Generate Tasks Workflow Model to the runtime location");

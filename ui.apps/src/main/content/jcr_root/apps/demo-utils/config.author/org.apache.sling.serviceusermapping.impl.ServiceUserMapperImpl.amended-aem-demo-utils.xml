@@ -3,5 +3,5 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="sling:OsgiConfig"
           service.ranking="{Long}0"
-          user.mapping="[com.adobe.aem.demo.aem-demo-utils:aem-demo-utils=aem-demo-utils-service]"
+          user.mapping="[com.adobe.aem.demo.demo-utils.core:aem-demo-utils=aem-demo-utils-service]"
 />

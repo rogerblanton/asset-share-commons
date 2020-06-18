@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:isCheckedOut="{Boolean}false"
     jcr:primaryType="cq:WorkflowModel"
-    jcr:uuid="04ef6ecb-8852-495d-b41b-5e7dbb3ccee1"
     sling:resourceType="cq/workflow/components/model"
-    version="1"
     description="No Description"
     title="Generate Asset Insights">
     <metaData
+        cq:lastModified="{Date}2020-04-16T17:48:16.640-04:00"
         cq:generatingPage="/apps/settings/workflow/models/demo/utils/generate-asset-insights/jcr:content"
-        cq:lastModified="{Long}1523915273566"
-        cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         transient="true"/>
     <nodes jcr:primaryType="nt:unstructured">
