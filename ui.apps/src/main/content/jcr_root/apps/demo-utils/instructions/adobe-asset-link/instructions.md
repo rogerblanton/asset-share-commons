@@ -57,6 +57,14 @@ To use FPO asset renditions in InDesign CC via Adobe Asset Link, you must re-pro
 3. Click on Adobe Asset Link
 4. The Adobe Asset Link panel with AEM content available, start searching or browsing.
 
+## Troubleshooting
+
+### Adobe XD and Asset Link
+
+Adobe XD supports Adobe Asset Link. To install, open XD, navigate to Plug-ins and search for "Adobe Asset Link".
+
+Note that Adobe XD (for macOS) requires the used to HTTPS to connect to AEM Author.
+
 ## Demos
 
 * [Adobe Asset Link Demo](https://internal.adobedemo.com/content/demo-hub/en/demos/external/europa-creative-cloudinappexperience.html)
