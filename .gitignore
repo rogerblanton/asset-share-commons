@@ -76,3 +76,4 @@ buildNumber.properties
 *.iml
 
 release/
+maven-repository/
