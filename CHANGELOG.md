@@ -9,6 +9,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com)
 <!-- Keep this up to date! After a release, change the tag name to the latest release -->
 [unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
 
+## [2020.07.08]
+
+### Added
+
++ Added CIF + Magento request/provisioning instructions as PDF
+
+### Changed
+
++ Replaced SMTP credentials to prevent spamming of mail service and added safeguards in place to help prevent spamming of Mail service
+
 ## [2020.06.18]
 
 ### Fixed

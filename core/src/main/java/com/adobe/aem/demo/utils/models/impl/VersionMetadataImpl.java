@@ -73,4 +73,8 @@ public class VersionMetadataImpl implements VersionMetadata {
         return productInfoProvider.getProductInfo().getVersion().getQualifier();
     }
 
+    @Override
+    public String getYearMonthDayVersion() {
+        return StringUtils.substringBefore(getQualifierVersion(), "T");
+    }
 }

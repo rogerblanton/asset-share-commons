@@ -13,6 +13,8 @@ public interface VersionMetadata {
 
     default String getFullVersion() { return "unknown"; }
 
+    default String getYearMonthDayVersion() { return "unknown"; }
+
     default String getMajorVersion() { return "unknown"; }
 
     default String getMinorVersion() { return "unknown"; }

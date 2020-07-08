@@ -30,8 +30,8 @@ Deploy the packages to aem.enablementadobe.com/maven
 
 ```
 // Demo Utils
-mvn deploy:deploy-file -Durl=file:///Users/davidg/demo-maven-repository/ -Dfile=/Users/davidg/Code/com.adobe.aem.demos.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.06.18.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.06.18
-mvn deploy:deploy-file -Durl=file:///Users/davidg/demo-maven-repository/ -Dfile=/Users/davidg/Code/com.adobe.aem.demos.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.06.18.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.06.18
+mvn deploy:deploy-file -Durl=file:///Users/davidg/demo-maven-repository/ -Dfile=/Users/davidg/Code/com.adobe.aem.demos.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.06.19.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.06.19
+mvn deploy:deploy-file -Durl=file:///Users/davidg/demo-maven-repository/ -Dfile=/Users/davidg/Code/com.adobe.aem.demos.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.06.19.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.06.19
 ```
 
 *  SFTP to enable2.eastus.cloudapp.azure.com `/var/www/html/maven`

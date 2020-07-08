@@ -7,4 +7,4 @@
           smtp.port="465"
           smtp.ssl="{Boolean}true"
           smtp.user="apikey"
-          smtp.password="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"/>
+          smtp.password="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"/>
