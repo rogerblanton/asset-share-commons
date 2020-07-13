@@ -60,14 +60,17 @@ import org.slf4j.LoggerFactory;
  * 
  *
  */
-@Component(service = EventHandler.class, 
-    immediate = true, 
+/*
+@Component(
+    service = EventHandler.class, 
+    immediate = false, 
     configurationPolicy = ConfigurationPolicy.REQUIRE, 
-     property = {
+    property = {
         "event.topics=org/osgi/framework/BundleEvent/STARTED",
         "event.topics=org/osgi/framework/ServiceEvent/REGISTERED"
     }
 )
+*/
 public class ComponentDisabler implements EventHandler {
     private static final Logger log = LoggerFactory.getLogger(ComponentDisabler.class);
 
@@ -106,9 +109,9 @@ public class ComponentDisabler implements EventHandler {
                 log.info("Disabling OSGi Component [ {} ] by AEM Demo Utils configuration.", dto.implementationClass);
                 scr.disableComponent(dto);
             } else if (dto == null) {
-                log.debug("OSGi Component for [ {} ] is null", componentName);
+                log.trace("OSGi Component for [ {} ] is null", componentName);
             } else if (scr.isComponentEnabled(dto)) {
-                log.debug("OSGi Component for [ {} ] is already disabled", componentName);
+                log.trace("OSGi Component for [ {} ] is already disabled", componentName);
             }
         }
     }
