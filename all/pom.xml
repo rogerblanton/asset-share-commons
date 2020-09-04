@@ -22,7 +22,7 @@
     <parent>
         <groupId>com.adobe.aem.demo</groupId>
         <artifactId>com.adobe.aem.demo.all-demos</artifactId>
-        <version>2020-07-13</version>
+        <version>2020.09.04</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -49,25 +49,21 @@
                 <configuration>
                     <group>all-demos</group>
                     <allowIndexDefinitions>true</allowIndexDefinitions>
+                    <failOnMissingEmbed>true</failOnMissingEmbed>
+
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.content</artifactId>
+                            <version>[2.11.0,)</version>
+                        </dependency>
+                    </dependencies>
+
                     <embeddeds>
                         <!-- All Demos Version Node -->
                         <embedded>
                             <groupId>com.adobe.aem.demo</groupId>
                             <artifactId>com.adobe.aem.demo.all-demos.ui.apps</artifactId>
-                            <type>zip</type>
-                            <target>/apps/all-demos-packages/application/install</target>
-                        </embedded>
-
-                        <!-- Core Components -->
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/all-demos-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.config</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
@@ -99,25 +95,43 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>
 
                         <!-- WKND SPA Editor -->
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>com.adobe.aem.guides.wknd-events.ui.apps</artifactId>
+                            <artifactId>wknd-spa-react.ui.apps</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>com.adobe.aem.guides.wknd-events.ui.content</artifactId>
+                            <artifactId>wknd-spa-react.ui.content</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
-                         <embedded>
+                       <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>com.adobe.aem.guides.wknd-events.ui.content.sample</artifactId>
+                            <artifactId>wknd-spa-angular.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>wknd-spa-angular.ui.content</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>                        
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
 
                         <!-- WKND - AEM Headless -->
@@ -169,10 +183,15 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/application/install</target>
                         </embedded>
-
                         <embedded>
                             <groupId>com.adobe.aem.commons</groupId>
                             <artifactId>assetshare.ui.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>
+                         <embedded>
+                            <groupId>com.adobe.aem.commons</groupId>
+                            <artifactId>assetshare.ui.content.sample</artifactId>
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
@@ -269,29 +288,30 @@
             <name>project</name>
             <url>file:${project.basedir}/../local-maven-repository</url>
 
-                // WKND Sites
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/aem-guides-wknd/ui.content/target/aem-guides-wknd.ui.content-0.0.3-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=aem-guides-wknd.ui.content -Dpackaging=zip -Dversion=0.0.3-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/aem-guides-wknd/ui.apps/target/aem-guides-wknd.ui.apps-0.0.3-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=aem-guides-wknd.ui.apps -Dpackaging=zip -Dversion=0.0.3-SNAPSHOT
-
                 // WKND Events (SPA Editor)
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-events/ui.content/target/com.adobe.aem.guides.wknd-events.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-events.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-events/ui.apps/target/com.adobe.aem.guides.wknd-events.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-events.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-spa/ui.content/target/wknd-spa-react.ui.content-1.0.3-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=wknd-spa-react.ui.content -Dpackaging=zip -Dversion=1.0.3-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-spa/ui.apps/target/wknd-spa-react.ui.apps-1.0.3-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=wknd-spa-react.ui.apps -Dpackaging=zip -Dversion=1.0.3-SNAPSHOT
+
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-spa/ui.content/target/wknd-spa-angular.ui.content-1.0.1-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=wknd-spa-angular.ui.content -Dpackaging=zip -Dversion=1.0.1-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-spa/ui.apps/target/wknd-spa-angular.ui.apps-1.0.1-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=wknd-spa-angular.ui.apps -Dpackaging=zip -Dversion=1.0.1-SNAPSHOT
+
 
                 // WKND Mobile (AEM Headlesss)
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.0-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/enablement/com.adobe.aem.guides.wknd-mobile/wknd-mobile.aem/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-mobile/wknd-mobile.aem/ui.content/target/com.adobe.aem.guides.wknd-mobile.ui.content-2.1.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.content -Dpackaging=zip -Dversion=2.1.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-mobile/wknd-mobile.aem/ui.apps/target/com.adobe.aem.guides.wknd-mobile.ui.apps-2.1.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.guides -DartifactId=com.adobe.aem.guides.wknd-mobile.ui.apps -Dpackaging=zip -Dversion=2.1.0-SNAPSHOT
 
-                // Core Components Showcase
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.showcase/ui.content/target/com.adobe.aem.demo.showcase.ui.content-1.0.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.content -Dpackaging=zip -Dversion=1.0
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/code/demo/com.adobe.aem.demo.all-demos/local-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.showcase/ui.apps/target/com.adobe.aem.demo.showcase.ui.apps-1.0.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.apps -Dpackaging=zip -Dversion=1.0
+                // Core Components Showcase (2020-09-04)
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/com.adobe.aem.demo.showcase/ui.content/target/com.adobe.aem.demo.showcase.ui.content-2.0.0.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.content -Dpackaging=zip -Dversion=2.0.0
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/com.adobe.aem.demo.showcase/ui.apps/target/com.adobe.aem.demo.showcase.ui.apps-2.0.0.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.showcase.ui.apps -Dpackaging=zip -Dversion=2.0.0
 
                 // Demo Utils
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/demo/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/com.adobe.aem.demo.demo-utils/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/com.adobe.aem.demo.demo-utils/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-2020.01.16-SNAPSHOT.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=2020.01.16-SNAPSHOT
 
-                // Asset Share Commons, ui.content
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.content/target/asset-share-commons.ui.content-1.9.4.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content -Dpackaging=zip -Dversion=1.9.4
-                mvn deploy:deploy-file -Durl=file:///Users/dgonzale/demo-maven-repository/ -Dfile=/Users/dgonzale/code/oss/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-1.9.4.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=1.9.4
+                // Asset Share Commons (2020-09-04)
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.content/target/asset-share-commons.ui.content-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.content.sample/target/asset-share-commons.ui.content.sample-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content.sample -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
 
 
         </repository>
@@ -323,16 +343,12 @@
         </dependency>
 
         <!-- Demo/embed dependencies -->
-        <!-- Core Components -->
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.content</artifactId>
+            <version>[2.11.0,)</version>
             <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.config</artifactId>
-            <type>zip</type>
+            <scope>compile</scope>
         </dependency>
 
         <!-- Core Components Library -->
@@ -370,19 +386,46 @@
         </dependency>        
 
         <!-- WKND SPA Editor / Events -->
-        <dependency>
+
+        <dependency>    
             <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>com.adobe.aem.guides.wknd-events.ui.apps</artifactId>
-            <version>[0.0.0,)</version>
+            <artifactId>wknd-spa-react.ui.apps</artifactId>
+            <version>[1.0.2,)</version>
             <type>zip</type>
-        </dependency>
+        </dependency> 
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>com.adobe.aem.guides.wknd-events.ui.content</artifactId>
-            <version>[0.0.0,)</version>
+            <artifactId>wknd-spa-react.ui.content</artifactId>
+            <version>[1.0.2,)</version>
             <type>zip</type>
         </dependency>
 
+        <dependency>    
+            <groupId>com.adobe.aem.guides</groupId>
+            <artifactId>wknd-spa-angular.ui.apps</artifactId>
+            <version>[1.0.0,)</version>
+            <type>zip</type>
+        </dependency> 
+        <dependency>
+            <groupId>com.adobe.aem.guides</groupId>
+            <artifactId>wknd-spa-angular.ui.content</artifactId>
+            <version>[1.0.0,)</version>
+            <type>zip</type>
+        </dependency>
+
+        <!-- SPA Project Core (includes hierarchy page) -->
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
+            <version>1.0.10</version>
+            <type>zip</type>
+        </dependency>        
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.core</artifactId>
+            <version>1.0.10</version>
+        </dependency>        
+        
         <!-- WKND Mobile / AEM Headless -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
@@ -429,13 +472,19 @@
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.apps</artifactId>
-            <version>[1.9.4,)</version>
+            <version>[1.9.9,)</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
             <artifactId>assetshare.ui.content</artifactId>
-            <version>[1.9.0,)</version>
+            <version>[1.9.9,)</version>
+            <type>zip</type>
+        </dependency>
+         <dependency>
+            <groupId>com.adobe.aem.commons</groupId>
+            <artifactId>assetshare.ui.content.sample</artifactId>
+            <version>[1.9.9,)</version>
             <type>zip</type>
         </dependency>
     </dependencies>

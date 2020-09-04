@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.aem.demo</groupId>
         <artifactId>com.adobe.aem.demo.all-demos</artifactId>
-        <version>2020-07-13</version>
+        <version>2020.09.04</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -62,6 +62,13 @@
                             <artifactId>com.adobe.aem.demo.all-demos.repository-structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
+                      <embeddeds>
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.core</artifactId>
+                            <target>/apps/all-demos/install</target>
+                        </embedded>
+                    </embeddeds>
                 </configuration>
             </plugin>
             <plugin>
@@ -92,6 +99,12 @@
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
+
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>spa.project.core.core</artifactId>
+            <version>1.0.10</version>
+        </dependency>        
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
