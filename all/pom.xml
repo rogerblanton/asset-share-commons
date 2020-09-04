@@ -113,6 +113,12 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
+                         <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>com.adobe.aem.guides.wknd-events.ui.content.sample</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>
 
                         <!-- WKND - AEM Headless -->
                         <embedded>
