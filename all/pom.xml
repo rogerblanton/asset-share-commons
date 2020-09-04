@@ -356,6 +356,12 @@
             <version>[0.0.0,)</version>
             <type>zip</type>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.aem.guides</groupId>
+            <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
+            <version>[0.0.0,)</version>
+            <type>zip</type>
+        </dependency>        
 
         <!-- WKND SPA Editor / Events -->
         <dependency>
