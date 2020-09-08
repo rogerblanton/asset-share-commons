@@ -13,4 +13,4 @@ mvn versions:set -DnewVersion=$2
 git add .
 git commit -m "$3 release"
 git push
-
+20
