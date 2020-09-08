@@ -115,7 +115,9 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
-                       <embedded>
+                        <!--
+                            Remove NG as there are conflicting OSGi Configs w/ react
+                        <embedded> 
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>wknd-spa-angular.ui.apps</artifactId>
                             <type>zip</type>
@@ -127,6 +129,7 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>                        
+                        -->
                         <embedded>
                             <groupId>com.adobe.aem</groupId>
                             <artifactId>spa.project.core.ui.apps</artifactId>
