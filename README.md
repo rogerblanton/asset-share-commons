@@ -63,10 +63,15 @@ The project comes with the auto-public repository configured. To setup the repos
 ```
 git add .
 git commit -m "2020.09.08 release"
+git push origin master
 mvn versions:set -DnewVersion=2020.09.08
 mvn clean package
 git push origin master
 mvn versions:set -DnewVersion=2020.09.09-SNAPSHOT
+git add .
+git commit -m "Next devleopment release"
+git push origin master
+
 ```
 
 Generate the zip file for All Demos and replace the existing AEM Package with the latest version :
