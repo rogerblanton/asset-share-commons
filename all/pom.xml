@@ -85,20 +85,14 @@
                         <!-- WKND Sites -->
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.apps</artifactId>
-                            <type>zip</type>
-                            <target>/apps/all-demos-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/all-demos-packages/content/install</target>
+                            <artifactId>aem-guides-wknd.all</artifactId>
+                            <type>content-package</type>
+                            <target>/apps/all-demos-packages/container/install</target>
                         </embedded>
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
-                            <type>zip</type>
+                            <type>content-package</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
 
@@ -371,21 +365,15 @@
         <!-- WKND Site -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.apps</artifactId>
-            <version>[0.0.0,)</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.content</artifactId>
-            <version>[0.0.0,)</version>
-            <type>zip</type>
+            <artifactId>aem-guides-wknd.all</artifactId>
+            <version>[0.0.6,)</version>
+            <type>content-package</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
-            <version>[0.0.0,)</version>
-            <type>zip</type>
+            <version>[0.0.6,)</version>
+            <type>content-package</type>
         </dependency>        
 
         <!-- WKND SPA Editor / Events -->
