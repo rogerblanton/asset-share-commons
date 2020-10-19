@@ -30,7 +30,11 @@ public class VersionMetadataImpl implements VersionMetadata {
     public String getUtilsVersion() {
         Bundle demoUtilBundle = FrameworkUtil.getBundle(VersionMetadata.class);
         if (demoUtilBundle != null) {
-            return StringUtils.substringBeforeLast(demoUtilBundle.getVersion().toString(), ".");
+            return demoUtilBundle.getVersion().getMajor() 
+            + "."
+            + demoUtilBundle.getVersion().getMinor()
+            + "."
+            + demoUtilBundle.getVersion().getMicro();
         }
         return "ERROR";
     }
