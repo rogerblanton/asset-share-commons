@@ -9,6 +9,7 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicyOption;
 import org.slf4j.Logger;
@@ -31,6 +32,7 @@ public class BulkSetup extends SlingAllMethodsServlet {
     private static Logger log = LoggerFactory.getLogger(BulkSetup.class);
 
     @Reference(
+            policy = ReferencePolicy.DYNAMIC,
             cardinality = ReferenceCardinality.MULTIPLE,
             policyOption = ReferencePolicyOption.GREEDY
     )
