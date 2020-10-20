@@ -1,6 +1,6 @@
 ## Automatic Local Set up
 
-Click the buttons below to automatically set up the Smart Tags cloud service:
+Click the buttons below to automatically set up the Smart Tags:
 
 * The **Smart Tags cloud service**
 * The **dam-update-service** key store
