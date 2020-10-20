@@ -7,7 +7,7 @@ Almost all features from 6.5 are supported in AEM as a Cloud Service, the few no
 
 * Adobe InDesign Server integration
 * AEM Screens
-* AEM Forms (which should be release Fall 2020)
+* AEM Forms (which should be release Spring/Summer 2021)
 
 ### Supported features
 
@@ -18,7 +18,7 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Assets | Adobe Asset Link | ✔ | ✔ |
 | Assets | Asset Insights | ✔ | ✔ |
 | Assets | Assets microservices (OOTB workers) | ✔ | ✘ |
-| Assets | Asset Share Commons | ✔ | ✔ |
+| Assets | Assets microservices (Custom workers) | ✔ | ✘ |
 | Assets | Adobe Stock integration | ✔ | ✔ |
 | Assets | Connected Assets | ✔ | ✔ |
 | Assets | Desktop App | ✔ | ✔ |
@@ -35,7 +35,7 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Sites | WKND App (SPA Editor) | ✔ | ✔ |
 | Content Services | Content Fragment HTTP API (read-only) | ✔ | ✔ |
 | Content Services | WKND Mobile (AEM Headless) | ✔ | ✔ |
-| All  | Ability to send e-mails from AEM (Available Soon) | ✘ | ✔ |
+| All  | E-mailing from AEM (requires request to Adobe Support) | ✔ | ✔ |
 
 ### Unsupported and Roadmap Features
 
@@ -46,21 +46,19 @@ The ETA column in the table below gives a rough indicator when features might be
 
 |        | ETA  | Feature |
 |--------|------|---------|
-| All    | TBD    | User generated content on AEM Publish (no writes to AEM Publish) |
-| Assets | July 2020 | Assets microservices (Custom workers) |
-| Assets | 2020 | Assets Catalogs (Commerce & InDesign Server integration)) |
-| Assets | 2020 | Assets Templates (InDesign Server integration) |
-| Assets | 2020 | InDesign Server integration (replacement w/ parity microservices) |
-| Assets | 2020 | Photoshoot Project (AEM Projects) |
+| All    | TBD  | User generated content on AEM Publish (no writes to AEM Publish) |
+| Assets | TBD | Assets Catalogs (Commerce & InDesign Server integration)) |
+| Assets | TBD | Assets Templates (InDesign Server integration) |
+| Assets | TBD | InDesign Server integration (replacement w/ parity microservices) |
+| Assets | TBD | Photoshoot Project (AEM Projects) |
 | Assets | TBD  | Smart Translation Search |
 | Assets | TBD  | Assets HTTP API *(for write operations)* |
 | Assets | TBD  | YouTube publishing |
 | Assets | TBD  | Zip file extraction |
 | Sites | Never | Design / Landing Page Importer |
-| Commerce | 2020 | Currently not supported |
 | Communities | TBD | Currently not supported |
-| Screens | 2020 | Not supported |
-| Forms | 2020 | Not Supported; [See details](https://wiki.corp.adobe.com/display/WEM/AEM+Forms+Services+and+Skyline) |
+| Screens | 2021 | Not supported |
+| Forms | 2021 | Not Supported; [See details](https://wiki.corp.adobe.com/display/WEM/AEM+Forms+Services+and+Skyline) |
 
 ## FAQs
 
@@ -80,7 +78,7 @@ Please review the [AEM as a Cloud Service Sandbox FAQ](https://wiki.corp.adobe.c
 
 ### How do I get an AEM as a Cloud Service sandbox?
 
-Once an Adobe IMS Org youre part of is provisioned for AEM as a Cloud Service:
+Once an Adobe IMS Org you're part of is provisioned for AEM as a Cloud Service:
 
 1. Navigate to [https://experience.adobe.com/](https://experience.adobe.com/)
 2. Ensure the Adobe IMS Org that has been provisioned with AEM as a Cloud Service is active in the Adobe IMS Org switcher.
@@ -104,11 +102,12 @@ To review how demo applications can be installed, please review this [deployment
 
 Download and run the AEM as a Cloud Service Quickstart Jar:
 
-1. In a browser, navigate to [https://downloads.experiencecloud.adobe.com](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) and login with your Adobe ID.
-2. Navigate to the AEM as a Cloud Service tab and download the latest AEM SDK zip file.
+1. Ensure Java 11 is installed
+2. In a browser, navigate to [https://downloads.experiencecloud.adobe.com](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) and login with your Adobe ID.
+3. Navigate to the AEM as a Cloud Service tab and download the latest AEM SDK zip file.
     + If the AEM as a Cloud Service tab is not present, your Adobe ID account is  not part of an Adobe IMS Organization that has access to the AEM as a Cloud Service product.
-3. Unzip the `aem-sdk-xxx.zip`
-4. Rename the Jar file to `aem-author-p4502.jar` or `aem-publish-p4503.jar`, ensure your `properties.license` file is in the same folder, and double-click the Jar to start it.
+4. Unzip the `aem-sdk-xxx.zip`
+5. Rename the Jar file to `aem-author-p4502.jar` or `aem-publish-p4503.jar`, and from the command line execute `java -jar aem-author-p4502.jar` or `java -jar aem-publish-p4503.jar`.
 
 ---
 
@@ -124,12 +123,8 @@ Demo packages can be installed on the local AEM as a Cloud Service Quickstart Ja
 
 No.
 
-We.Retail has dependencies on APIs that are not available in AEM as a Cloud Service so it will not work there. Instead, use the WKND Site which is the new AEM reference web site.
+We.Retail has dependencies on APIs that are not available in AEM as a Cloud Service so it will not work there. Instead, use the latest [WKND Site](https://github.com/adobe/aem-guides-wknd/releases/) which is the new AEM reference web site implementation.
 
 ----
 
-
 Please report any issues to <a href="mailto:Grp-AEMTechMarketing@adobe.com">Grp-AEMTechMarketing@adobe.com</a>
-
-
-
