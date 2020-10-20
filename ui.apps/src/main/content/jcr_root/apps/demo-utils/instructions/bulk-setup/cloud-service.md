@@ -11,19 +11,18 @@
 
 <dt><h4>Automatic configurations</h4></dt>
 
-<!--
 <dd>
     <input type="checkbox" id="adobe-stock" name="adobe-stock" value="install" checked/>
     <label for="adobe-stock">Adobe Stock integration</label>
 </dd>
--->
 
+<!--
 <dd>
     <input type="checkbox" id="smart-tags" name="smart-tags" value="install" checked/>
     <label for="smart-tags">Smart Tags</label>
 </dd>
 
-<!--
+
 <dd>
     <input type="checkbox" id="adobe-asset-link" name="adobe-asset-link" value="install"/>
     <label for="adobe-asset-link">Adobe Asset Link <em>(requires <a  x-cq-linkchecker="skip"  href="/apps/demo-utils/instructions/adobe-asset-link.html">one-time Adobe Extension installation</a>)</em></label>
