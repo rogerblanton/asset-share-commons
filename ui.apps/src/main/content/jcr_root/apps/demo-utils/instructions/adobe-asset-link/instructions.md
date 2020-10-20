@@ -10,11 +10,13 @@ mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 
 ---
 
-### Changes from Adobe Asset Link 1.x to 2.x
+### Upgrading from previous version of Asset Link 
 
-* `assetlink-settings.json` is no longer needed to specify the AEM Author instance. You can now specify AEM Authors instances in the Asset Link 2.x Extension panel directly, i.e. `http://localhost:4502`
-* You can setup multiple AEM Author connections in Asset Link, and toggle between them, in the CC App.
-* To demo, you still need to use the Extension Manager and `.zxp` file, however real customers deploy the Adobe Asset Link extension by configuring it to be included in the CC App their employees will download (via adminconsole.adobe.com)
+* Close all Adobe Creative Cloud applications (Photoshop, InDesign, etc.)
+* Remove any existing Adobe Asset Link `.zxp` file using the Anastasia Extension Manager
+    * Select the Creative Cloud app on left, and select Adobe Asset Link plugin on right, and tap Remove
+* Install the new `.zxp` file
+* Restart the Adobe Creative Cloud application(s)
 
 ---
  
@@ -24,8 +26,8 @@ The installation of the Adobe Extension only needs to be performed once per the 
 
 <ol>
     <li>Download and install the Extension Manager application from <a href="https://install.anastasiy.com"   x-cq-linkchecker="skip" target="_blank" >https://install.anastasiy.com</a>.
-    <li>Download the Adobe Asset Link extension (<a href="https://link.enablementadobe.com/asset-link-zxp"  x-cq-linkchecker="skip" target="_blank">com.adobe.assetlink.zxp</a>) to your computer.
-    <li>Open the Extension Manager application, click Install and select <code>com.adobe.assetlink.zxp</code>. Install the extension.
+    <li>Download the Adobe Asset Link extension (<a href="https://link.enablementadobe.com/asset-link-zxp"  x-cq-linkchecker="skip" target="_blank">com.adobe.assetlink-x.x.x-signed.zxp</a>) to your computer.
+    <li>Open the Extension Manager application, click Install and select <code>com.adobe.assetlink-x.x.x-signed.zxp</code>. Install the extension.
 </ol>
 
 <!-- CLOUD-SERVICE_INSTRUCTIONS -->

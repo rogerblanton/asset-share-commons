@@ -3,7 +3,7 @@
           jcr:primaryType="sling:Folder"
           sling:resourceType="demo-utils/instructions/adobe-asset-link"
           sling:resourceSuperType="demo-utils/components/base"
-          jcr:title="Adobe Asset Link 2.0"
+          jcr:title="Adobe Asset Link 2.1"
           subProducts="[AEM Assets]"
           cloudService="cloud-service"
           cloudServiceQuickstart="quickstart"
