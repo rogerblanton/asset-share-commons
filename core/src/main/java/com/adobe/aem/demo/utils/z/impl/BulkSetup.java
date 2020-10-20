@@ -36,7 +36,7 @@ public class BulkSetup extends SlingAllMethodsServlet {
             cardinality = ReferenceCardinality.MULTIPLE,
             policyOption = ReferencePolicyOption.GREEDY
     )
-    private List<Executable> executables;
+    private volatile List<Executable> executables;
 
     public void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
 
