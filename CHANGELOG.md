@@ -1,13 +1,12 @@
 # Change Log
 
-All notable changes to this project will be documented in this file. This format was adapated
-after the 3.9.0 release. All changes up until the 3.9.0 release can be found in https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases.
-
 The format is based on [Keep a Changelog](http://keepachangelog.com)
 
-## Unreleased ([details][unreleased changes details])
-<!-- Keep this up to date! After a release, change the tag name to the latest release -->
-[unreleased changes details]: https://github.com/Adobe-Consulting-Services/acs-aem-commons/compare/acs-aem-commons-4.3.2...HEAD
+## [2020.11.05]
+
++ Added WKND Assets
++ Added Smart Tags training to Smart Tags card
++ Removed default Smart Tag training namespace, allowing different demo-ers to not accidently cross-train tagging
 
 ## [2020.07.08]
 

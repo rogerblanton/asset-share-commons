@@ -9,6 +9,7 @@ All Demos includes:
 
 + Demo Utils for AEM as a Cloud Service
 + WKND Site
++ WKND Assets
 + WKND App (SPA Editor)
 + WKND Mobile (AEM Headless)
 + Core Components Showcase

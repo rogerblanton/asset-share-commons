@@ -1,16 +1,15 @@
 ### Reset Smart Tagging and Training
 
-Smart Tagging is now isolated to your specific AEM instance (not shared across demoers). Smart Tags for the AEM instance can be reset in the following ways:
+Smart Tagging is now isolated to your specific AEM instance (not shared across demo-ers). Smart Tags for the AEM instance can be reset in the following ways:
 
 * **Reset Tagging Status:** Once an asset is smart tagged, it cannot not be smart tagged again for 24 hours. Resetting the **tagging status** allows the asset to be smart tagged immediately.
-* **Reset Training Status:** Once an asset has been trained for smart tagging, it cannot trained again for 24 hours. Resetting the **training status** allows the asset to be re-trainined immediately.
+* **Reset Training Status:** Once an asset has been trained for smart tagging, it cannot trained again for 24 hours. Resetting the **training status** allows the asset to be re-trained immediately.
 * **Full Reset of Training & Tagging:** Prior trainings are stored in the Adobe Cloud for this AEM instance. To reset all training, a full reset of Smart Tag training is required. This also resets the **training status** and **tagging status** for assets.
     * Smart Tags must be set up, otherwise clicking this button will result in an error.
 
 <a href="/apps/demo-utils/instructions/smart-tags.reset.html?tagging" class="button">Reset Tagging Status</a>
 <a href="/apps/demo-utils/instructions/smart-tags.reset.html?training" class="button">Reset Training Status</a>
 <a href="/apps/demo-utils/instructions/smart-tags.reset.html?all" class="button">Full Reset of Training & Tagging</a>
-
 
 ## Troubleshooting Smart Tags Training
 
@@ -34,5 +33,3 @@ Smart Tagging is now isolated to your specific AEM instance (not shared across d
     * [Configuring Smart Tags](https://helpx.adobe.com/experience-manager/6-4/assets/using/config-smart-tagging.html)
     * [Smart Tags Training Guidelines](https://helpx.adobe.com/experience-manager/6-4/assets/using/smart-tags-training-guidelines.html)
     * [Enhanced Smart Tags](https://helpx.adobe.com/experience-manager/6-4/assets/using/enhanced-smart-tags.html#TrainingtheSmartContentService)
-* Adobe Medium Blog post
-    * [Effic
