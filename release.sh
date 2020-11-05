@@ -11,6 +11,6 @@ mvn deploy:deploy-file -Durl=file://$PWD/releases/maven/ -Dfile=$PWD/ui.apps/tar
 
 mvn versions:set -DnewVersion=$2
 git add .
-git commit -m "$3 release"
+git commit -m "$2 development version"
 git push
 
