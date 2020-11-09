@@ -22,7 +22,7 @@
     <parent>
         <groupId>com.adobe.aem.demo</groupId>
         <artifactId>com.adobe.aem.demo.all-demos</artifactId>
-        <version>2020.09.04</version>
+        <version>2020.11.05</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -158,6 +158,20 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
+
+                        <!-- WKND Assets -->
+                        <embedded>
+                            <groupId>com.adobe.demo</groupId>
+                            <artifactId>damdemo.ui.apps</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.demo</groupId>
+                            <artifactId>damdemo.ui.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/all-demos-packages/content/install</target>
+                        </embedded>                    
 
                         <!-- Showcase - Core Components -->
                         <embedded>
@@ -310,7 +324,9 @@
                 mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.content.sample/target/asset-share-commons.ui.content.sample-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.content.sample -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
                 mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
 
-
+                // WKND Assets
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/ui.apps/target/damdemo.ui.apps-1.0-SNAPSHOT.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.ui.apps -Dpackaging=zip -Dversion=1.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/ui.content/target/damdemo.ui.content-1.0-SNAPSHOT.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.ui.content -Dpackaging=zip -Dversion=1.0-SNAPSHOT
         </repository>
 -->
         <repository>
@@ -459,6 +475,20 @@
             <type>zip</type>
         </dependency>
 
+        <!-- WKND Assets -->
+        <dependency>
+            <groupId>com.adobe.demo</groupId>
+            <artifactId>damdemo.ui.apps</artifactId>
+            <version>[0.0.1,)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.demo</groupId>
+            <artifactId>damdemo.ui.content</artifactId>
+            <version>[0.0.1,)</version>
+            <type>zip</type>
+        </dependency>
+    
         <!-- Asset Share Commons -->
         <dependency>
             <groupId>com.adobe.aem.commons</groupId>
