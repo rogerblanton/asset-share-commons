@@ -1,14 +1,27 @@
 package com.adobe.aem.demo.utils.assets.dynamicmedia.impl;
 
+import java.io.IOException;
+import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.jcr.Node;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
+import javax.jcr.security.AccessControlEntry;
+import javax.jcr.security.AccessControlManager;
+import javax.jcr.security.Privilege;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+
 import com.adobe.aem.demo.utils.Executable;
 import com.adobe.aem.demo.utils.cloudservices.CloudServiceCreator;
 import com.adobe.aem.demo.utils.cloudservices.impl.AbstractCloudServiceCreator;
 import com.adobe.aem.demo.utils.impl.CleanerUtil;
 import com.adobe.aem.demo.utils.impl.Constants;
-import com.adobe.aem.demo.utils.impl.RequireAem;
 import com.adobe.granite.crypto.CryptoException;
 import com.adobe.granite.crypto.CryptoSupport;
-import com.day.cq.commons.jcr.JcrUtil;
+
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.api.JackrabbitSession;
 import org.apache.jackrabbit.api.security.JackrabbitAccessControlList;
@@ -21,7 +34,6 @@ import org.apache.jackrabbit.commons.jackrabbit.authorization.AccessControlUtils
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.PersistenceException;
-import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.event.jobs.JobManager;
@@ -32,25 +44,11 @@ import org.apache.sling.servlethelpers.MockSlingHttpServletRequest;
 import org.apache.sling.servlethelpers.MockSlingHttpServletResponse;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.Node;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import javax.jcr.security.AccessControlEntry;
-import javax.jcr.security.AccessControlManager;
-import javax.jcr.security.Privilege;
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-import java.io.IOException;
-import java.security.Principal;
-import java.util.HashMap;
-import java.util.Map;
-
 @Component(service = {Servlet.class, Executable.class},
-        enabled = false,
+        enabled = true,
         property = {
                 "sling.servlet.methods=GET",
                 "sling.servlet.resourceTypes=demo-utils/instructions/dynamic-media",
@@ -59,7 +57,7 @@ import java.util.Map;
         }
 )
 @SuppressWarnings("squid:S2068")
-public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements CloudServiceCreator, Executable {
+public class DynamicMediaScene7AemCS extends AbstractCloudServiceCreator implements CloudServiceCreator, Executable {
     public static final String PAGE_PATH = "/conf/global/settings/cloudconfigs";
     public static final String PAGE_NAME = "dmscene7";
     public static final String TEMPLATE = "/libs/dam/templates/dmscene7";
@@ -72,16 +70,6 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
 
     @Reference(target = "(sling.servlet.selectors=sampleassets)")
     private transient Servlet sampleAssetsServlet;
-
-    @Reference(target = "(sling.servlet.selectors=pushviewerpresets)")
-    private transient Servlet s7damDefaultViewerPresetCopyServlet;
-
-
-    @Reference(
-            target = "(sling.servlet.selectors=skylinesync)",
-            cardinality = ReferenceCardinality.OPTIONAL
-    )
-    private transient Servlet syncSkylineServlet;
 
     @Reference
     private transient CryptoSupport cryptoSupport;
@@ -183,10 +171,11 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
         params.put("s7RootPath", "DynamicmediaNA1/");
         params.put("syncEnabled", "on");
         params.put("targetPath", "/content/dam/");
+        params.put("selective-sync", "off");
         params.put("userHandle", "u|149206|dynamicmedia-na1@adobe.com");
+
         return params;
     }
-
 
     /* Copied from DMS7 Code -- Not exported */
 
@@ -204,14 +193,15 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
 
     public void execute(SlingHttpServletRequest request, SlingHttpServletResponse response) throws Exception {
         final ResourceResolver resourceResolver = request.getResourceResolver();
-
         final Map config = getParams();
 
         addToAdministrators(resourceResolver.adaptTo(Session.class));
 
         removeExisting(resourceResolver);
 
-        JcrUtils.getOrCreateByPath("/conf/global/settings/cloudconfigs", JcrResourceConstants.NT_SLING_FOLDER, resourceResolver.adaptTo(Session.class));
+        JcrUtils.getOrCreateByPath("/conf/global/settings/cloudconfigs",
+            JcrResourceConstants.NT_SLING_FOLDER,
+            resourceResolver.adaptTo(Session.class));
 
         execute(resourceResolver,
                 cryptoSupport,
@@ -221,32 +211,20 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
                 TITLE,
                 config);
 
+                
         resourceResolver.copy(
                 "/apps/demo-utils/resources/dynamic-media-scene7/mimeTypes",
                 PAGE_PATH + "/" + PAGE_NAME + "/" + JcrConstants.JCR_CONTENT);
+        
+                try {
+                    resourceResolver.commit();
 
-        log.info("AEM Demo Utils - DMS7 - Copy Presets");
-        invokeS7damDefaultViewerPresetCopyServlet(resourceResolver);
-
-        log.info("AEM Demo Utils - DMS7 - Copy Samples");
-        invokeOotbSampleAssetsServlet(resourceResolver, "copySamples");
-
-        log.info("AEM Demo Utils - DMS7 - Sync Presets");
-        invokeOotbSampleAssetsServlet(resourceResolver, "syncPresets");
-
-        log.info("AEM Demo Utils - DMS7 - skylineSync servlet");
-        invokeSkylineSyncServlet(resourceResolver);
-
-        resourceResolver.commit();
-    }
-
-    private void removeExisting(ResourceResolver resourceResolver) throws PersistenceException {
-        CleanerUtil.remove(resourceResolver, PAGE_PATH + "/" + PAGE_NAME);
-        CleanerUtil.remove(resourceResolver, "/conf/global/settings/dam/dm");
-        CleanerUtil.remove(resourceResolver, "/content/dam/_CSS");
-        CleanerUtil.remove(resourceResolver, "/content/dam/_DMSAMPLE");
-
-        killJobs(resourceResolver);
+                    log.info("AEM Demo Utils - DMS7 - triggerSetupJob");
+                     invokeOotbSampleAssetsServlet(resourceResolver, "triggerSetupJob");
+                } catch (Exception e) {
+                    log.error("Could not setup Demo Utils due to:", e);
+                    throw new Exception("AEM Demo Utils - Could not setup DM");
+                }
     }
 
     private void invokeOotbSampleAssetsServlet(ResourceResolver resourceResolver, String operationName) throws ServletException, IOException {
@@ -267,10 +245,12 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
         try {
             sampleAssetsServlet.service(request, response);
 
-            log.info("AEM Demo Utils DMS7 progress status: " + response.getOutputAsString());
+            //log.info("AEM Demo Utils DMS7 progress status: " + response.getOutputAsString());
 
-            if (response.getStatus() == 500) {
-                throw new ServletException("Unable to have OOTB sampleassets servlet process request");
+            if (response.getStatus() == 200) {
+                log.info("AEM Demo Utils triggered off Dynamic Media set up.");
+            } else if (response.getStatus() == 500) {
+                throw new ServletException("Unable to have OOTB sampleassets servlet process " + operationName + " request");
             }
         } catch (Throwable e) {
             if (e instanceof ServletException) {
@@ -278,94 +258,6 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
             } else {
                 log.error("Mock response had problem with response buffer... ignore it.");
             }
-        }
-    }
-
-    private void invokeS7damDefaultViewerPresetCopyServlet(ResourceResolver resourceResolver) throws ServletException, IOException {
-        MockSlingHttpServletRequest request = new MockSlingHttpServletRequest(resourceResolver);
-        MockSlingHttpServletResponse response = new MockSlingHttpServletResponse();
-
-        response.setCharacterEncoding("UTF-8");
-        request.setMethod(HttpConstants.METHOD_POST);
-        request.setResource(resourceResolver.getResource("/libs/settings/dam/dm/presets/viewer"));
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setResourcePath("/libs/settings/dam/dm/presets/viewer");
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setSelectorString("pushviewerpresets");
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setExtension("json");
-
-        try {
-            s7damDefaultViewerPresetCopyServlet.service(request, response);
-
-            if (response.getStatus() == 500) {
-                throw new ServletException("Unable to have OOTB s7damDefaultViewerPresetCopyServlet process request");
-            }
-        } catch (Throwable e) {
-            if (e instanceof ServletException) {
-                throw e;
-            } else {
-                log.error("Mock response had problem with response buffer... ignore it.");
-            }
-        }
-    }
-
-
-    private void invokeSkylineSyncServlet(ResourceResolver resourceResolver) throws ServletException, IOException {
-        MockSlingHttpServletRequest request = new MockSlingHttpServletRequest(resourceResolver);
-        MockSlingHttpServletResponse response = new MockSlingHttpServletResponse();
-
-        response.setCharacterEncoding("UTF-8");
-        request.setMethod(HttpConstants.METHOD_POST);
-        request.setResource(resourceResolver.getResource("/content/dam"));
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setResourcePath("/content/dam");
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setSelectorString("skylinesync");
-        ((MockRequestPathInfo) request.getRequestPathInfo()).setExtension("json");
-
-        try {
-            if (syncSkylineServlet != null) {
-                syncSkylineServlet.service(request, response);
-
-                if (response.getStatus() == 500) {
-                    throw new ServletException("Unable to have OOTB syncSkylineServlet process request");
-                }
-            } else {
-                log.warn("Could not find syncSkylineServlet");
-            }
-        } catch (Throwable e) {
-            if (e instanceof ServletException) {
-                throw e;
-            } else {
-                log.error("Mock response had problem with response buffer... ignore it.");
-            }
-        }
-    }
-
-
-    private void copyPresets(ResourceResolver resourceResolver) throws PersistenceException, RepositoryException {
-        String ootbPresetsPath = "/libs/settings/dam/dm/presets/viewer";
-
-        try {
-            // make sure the preset destination already exists
-            JcrUtils.getOrCreateByPath("/conf/global/settings/dam", JcrConstants.NT_FOLDER, resourceResolver.adaptTo(Session.class));
-            JcrUtils.getOrCreateByPath("/conf/global/settings/dam/dm", "sling:Folder", resourceResolver.adaptTo(Session.class));
-            Node node = JcrUtils.getOrCreateByPath("/conf/global/settings/dam/dm/presets/viewer", JcrConstants.NT_FOLDER, resourceResolver.adaptTo(Session.class));
-
-            Resource confParentResource = resourceResolver.getResource(node.getPath());
-
-            if (confParentResource.getChild("viewer") != null) {
-                resourceResolver.delete(confParentResource.getChild("viewer"));
-            }
-
-            Session session = resourceResolver.adaptTo(Session.class);
-            Node src = session.getNode(ootbPresetsPath);
-            Node dest = session.getNode(confParentResource.getPath());
-
-            JcrUtil.copy(src, dest, "viewer");
-
-            setAccessControl(session, session.getNode(confParentResource.getPath()));
-
-            addACLPermissions(session);
-        } catch (Exception e) {
-            log.error("Error copying OOTB Presets and applying permissions.", e);
-            throw e;
         }
     }
 
@@ -398,6 +290,15 @@ public class DynamicMediaScene7 extends AbstractCloudServiceCreator implements C
         }
     }
 
+    private void removeExisting(ResourceResolver resourceResolver) throws PersistenceException {
+        CleanerUtil.remove(resourceResolver, PAGE_PATH + "/" + PAGE_NAME);
+        CleanerUtil.remove(resourceResolver, CONF_GLOBAL_DM);
+        CleanerUtil.remove(resourceResolver, "/conf/global/settings/cloudconfigs/dmscene7");
+        //CleanerUtil.remove(resourceResolver, "/content/dam/_CSS");
+        //CleanerUtil.remove(resourceResolver, "/content/dam/_DMSAMPLE");
+
+        killJobs(resourceResolver);
+    }
 }
 
 

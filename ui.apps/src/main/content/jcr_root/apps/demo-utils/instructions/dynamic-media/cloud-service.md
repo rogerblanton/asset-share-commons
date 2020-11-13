@@ -1,12 +1,15 @@
 
-### Automatic Cloud Set up
+## Automatic Local Set up
 
+Automatic set up for Dynamic Media has been REMOVED indefinitely. Please use the Manual Set up instructions below instead.
+
+<!--
 Click the button below to automatically set up the Dynamic Media Cloud Service.
 
 **AFTER CLICKING, BE PATIENT... you will be re-directed to a success or failure page indicating if it's set up successfully.**
 
 <a href="/apps/demo-utils/instructions/dynamic-media.install.html?id=na" class="button">Configure for North America</a>
-
+-->
 ### Manually Set up Dynamic Media Cloud Service
 
 1. Navigate to **AEM > Tools > Cloud Services**.

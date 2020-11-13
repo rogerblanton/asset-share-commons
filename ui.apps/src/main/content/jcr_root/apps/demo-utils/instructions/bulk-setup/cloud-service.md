@@ -30,8 +30,8 @@
 -->
 
 <dd>
-    <input type="checkbox" id="dynamic-media-scene7" name="dynamic-media-scene7" value="install"/>
-    <label for="dynamic-media-scene7">Dynamic Media</label>
+    <input type="checkbox" id="dynamic-media-scene7" name="dynamic-media-scene7" value="install" disabled/>
+    <label for="dynamic-media-scene7">Dynamic Media (<em><a href="/apps/demo-utils/instructions/dynamic-media.html">Manual set up required</a></em>)</label>
 </dd>
 
 <dd>

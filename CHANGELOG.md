@@ -2,11 +2,15 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com)
 
+## [2020.11.13]
+
++ Removed automatic setup option for Dynamic Media
+
 ## [2020.11.05]
 
 + Added WKND Assets
 + Added Smart Tags training to Smart Tags card
-+ Removed default Smart Tag training namespace, allowing different demo-ers to not accidently cross-train tagging
++ Removed default Smart Tag training namespace, allowing different demo-ers to not accidentally cross-train tagging
 
 ## [2020.07.08]
 
