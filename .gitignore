@@ -75,7 +75,7 @@ buildNumber.properties
 .idea/
 *.iml
 
-release/
+releases/
 maven-repository/
 .history/
 .vscode/
