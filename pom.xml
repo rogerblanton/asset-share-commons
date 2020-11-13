@@ -18,7 +18,7 @@
     <groupId>com.adobe.aem.demo</groupId>
     <artifactId>com.adobe.aem.demo.demo-utils</artifactId>
     <packaging>pom</packaging>
-    <version>2020.11.13</version>
+    <version>2020.11.14-SNAPSHOT</version>
     <description>demo-utils</description>
 
     <modules>
