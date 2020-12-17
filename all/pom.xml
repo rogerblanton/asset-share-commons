@@ -51,6 +51,7 @@
                     <allowIndexDefinitions>true</allowIndexDefinitions>
                     <failOnMissingEmbed>true</failOnMissingEmbed>
 
+                    <!--
                     <dependencies>
                         <dependency>
                             <groupId>com.adobe.cq</groupId>
@@ -58,6 +59,7 @@
                             <version>[2.11.0,)</version>
                         </dependency>
                     </dependencies>
+                    -->
 
                     <embeddeds>
                         <!-- All Demos Version Node -->
@@ -94,7 +96,7 @@
                             <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
                             <type>content-package</type>
                             <target>/apps/all-demos-packages/content/install</target>
-                        </embedded>
+                        </embedded>cx    ,.
 
                         <!-- WKND SPA Editor -->
                         <embedded>
@@ -109,6 +111,7 @@
                             <type>zip</type>
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>
+                        
                         <!--
                             Remove NG as there are conflicting OSGi Configs w/ react
                         <embedded> 
@@ -124,6 +127,7 @@
                             <target>/apps/all-demos-packages/content/install</target>
                         </embedded>                        
                         -->
+
                         <embedded>
                             <groupId>com.adobe.aem</groupId>
                             <artifactId>spa.project.core.ui.apps</artifactId>
@@ -162,16 +166,10 @@
                         <!-- WKND Assets -->
                         <embedded>
                             <groupId>com.adobe.demo</groupId>
-                            <artifactId>damdemo.ui.apps</artifactId>
+                            <artifactId>damdemo.all</artifactId>
                             <type>zip</type>
-                            <target>/apps/all-demos-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.demo</groupId>
-                            <artifactId>damdemo.ui.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/all-demos-packages/content/install</target>
-                        </embedded>                    
+                            <target>/apps/all-demos-packages/container/install</target>
+                        </embedded>                  
 
                         <!-- Showcase - Core Components -->
                         <embedded>
@@ -325,8 +323,7 @@
                 mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
 
                 // WKND Assets
-                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/ui.apps/target/damdemo.ui.apps-1.0-SNAPSHOT.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.ui.apps -Dpackaging=zip -Dversion=1.0-SNAPSHOT
-                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/ui.content/target/damdemo.ui.content-1.0-SNAPSHOT.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.ui.content -Dpackaging=zip -Dversion=1.0-SNAPSHOT
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/all/target/damdemo.all-1.0.4.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.all -Dpackaging=zip -Dversion=1.0.4
         </repository>
 -->
         <repository>
@@ -368,13 +365,14 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.apps</artifactId>
-            <version>${core.wcm.components.version}</version>
+            <version>[2.11.0,)</version>
             <type>zip</type>
         </dependency>
+
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.content</artifactId>
-            <version>${core.wcm.components.version}</version>
+            <version>[2.11.0,)</version>
             <type>zip</type>
         </dependency>
 
@@ -478,14 +476,8 @@
         <!-- WKND Assets -->
         <dependency>
             <groupId>com.adobe.demo</groupId>
-            <artifactId>damdemo.ui.apps</artifactId>
-            <version>[1.0.2,)</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.demo</groupId>
-            <artifactId>damdemo.ui.content</artifactId>
-            <version>[1.0.2,)</version>
+            <artifactId>damdemo.all</artifactId>
+            <version>[1.0.4,)</version>
             <type>zip</type>
         </dependency>
     
