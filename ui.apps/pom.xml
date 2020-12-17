@@ -23,7 +23,7 @@
     <parent>
         <groupId>com.adobe.aem.demo</groupId>
         <artifactId>com.adobe.aem.demo.all-demos</artifactId>
-        <version>2020.12.10</version>
+        <version>2020.12.17</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
