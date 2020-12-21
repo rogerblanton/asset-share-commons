@@ -149,8 +149,8 @@ public class InstallSmartTags extends AbstractCloudServiceCreator implements Exe
             if (productInfoProvider.getProductInfo().getVersion().compareTo(ORIGINAL_CLOUD_SERVICE_VERSION) < 0) {
                 // 6.5 only
                 setupIndexes(resourceResolver);
+                updateWorkflow(resourceResolver);
             }
-            updateWorkflow(resourceResolver);
         } catch (Exception e) {
             throw new ServletException(e);
         }

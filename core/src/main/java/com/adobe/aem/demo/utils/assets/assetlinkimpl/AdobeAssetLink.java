@@ -3,6 +3,7 @@ package com.adobe.aem.demo.utils.assets.assetlinkimpl;
 import com.adobe.aem.demo.utils.Executable;
 import com.adobe.aem.demo.utils.impl.AbstractExecutable;
 import com.adobe.aem.demo.utils.impl.Constants;
+import com.adobe.granite.license.ProductInfoProvider;
 import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -36,17 +37,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
 
-@Component(service = {Servlet.class, Executable.class},
-        property = {
-                "sling.servlet.methods=GET",
-                "sling.servlet.resourceTypes=demo-utils/instructions/adobe-asset-link",
-                "sling.servlet.selectors=install",
-                "sling.servlet.extensions=html"
-        }
-)
+import static com.adobe.aem.demo.utils.models.impl.MarkdownWrapperImpl.ORIGINAL_CLOUD_SERVICE_VERSION;
+
+
+@Component(service = { Servlet.class, Executable.class }, property = { "sling.servlet.methods=GET",
+        "sling.servlet.resourceTypes=demo-utils/instructions/adobe-asset-link", "sling.servlet.selectors=install",
+        "sling.servlet.extensions=html" })
 public class AdobeAssetLink extends AbstractExecutable {
     public static final String CONFIG_PACKAGE_PATH = "/apps/demo-utils/resources/adobe-asset-link/com.adobe.aem.demo.demo-utils.asset-link-config-2.0.zip";
     private static Logger log = LoggerFactory.getLogger(AdobeAssetLink.class);
+
+    @Reference
+    private ProductInfoProvider productInfoProvider;
 
     @Reference
     private transient Packaging packaging;
@@ -70,10 +72,13 @@ public class AdobeAssetLink extends AbstractExecutable {
         final ResourceResolver resourceResolver = request.getResourceResolver();
 
         addToAdministrators(request.getResourceResolver().adaptTo(Session.class));
-        
+
         installPackage(resourceResolver, CONFIG_PACKAGE_PATH);
 
-        updateWorkflow(resourceResolver);
+        if (productInfoProvider.getProductInfo().getVersion().compareTo(ORIGINAL_CLOUD_SERVICE_VERSION) < 0) {
+            // 6.5 only
+            updateWorkflow(resourceResolver);
+        }
 
         if (resourceResolver.hasChanges()) {
             resourceResolver.commit();
