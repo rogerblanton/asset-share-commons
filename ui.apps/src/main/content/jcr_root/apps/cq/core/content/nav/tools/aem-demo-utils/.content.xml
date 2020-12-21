@@ -6,7 +6,6 @@
 
     <how-to-demo/>
     <all-demos/>
-    <branded-experiences/>
     <bulk-setup/>
     <wknd-assets/>
 
@@ -26,6 +25,7 @@
 
 
     <!-- Sites -->
+    <wknd-styler />
     <core-components-showcase/>
     <core-components-library/>
     <spa-editor />
@@ -44,6 +44,9 @@
     <brand-portal/>
     <smart-translation-search/>
     <email-server/>
+
+    <branded-experiences/>
+
 </jcr:root>
 
 
