@@ -365,14 +365,14 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.apps</artifactId>
-            <version>[2.11.0,)</version>
+            <version>2.13.0</version>
             <type>zip</type>
         </dependency>
 
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.examples.ui.content</artifactId>
-            <version>[2.11.0,)</version>
+            <version>2.13.0</version>
             <type>zip</type>
         </dependency>
 
