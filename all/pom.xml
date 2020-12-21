@@ -96,7 +96,7 @@
                             <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
                             <type>content-package</type>
                             <target>/apps/all-demos-packages/content/install</target>
-                        </embedded>cx    ,.
+                        </embedded>
 
                         <!-- WKND SPA Editor -->
                         <embedded>
@@ -323,7 +323,7 @@
                 mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/asset-share-commons/ui.apps/target/asset-share-commons.ui.apps-2.0.0-SNAPSHOT.zip -DgroupId=com.adobe.aem.commons -DartifactId=assetshare.ui.apps -Dpackaging=zip -Dversion=2.0.0-SNAPSHOT
 
                 // WKND Assets
-                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/all/target/damdemo.all-1.0.4.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.all -Dpackaging=zip -Dversion=1.0.4
+                mvn deploy:deploy-file -Durl=file:///Users/davidg/releases/maven/ -Dfile=/Users/davidg/code/aem-guides-wknd-assets/all/target/damdemo.all-2020.12.21.zip -DgroupId=com.adobe.demo -DartifactId=damdemo.all -Dpackaging=zip -Dversion=2020.12.21
         </repository>
 -->
         <repository>
