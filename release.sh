@@ -8,6 +8,7 @@ git push
 
 mvn deploy:deploy-file -Durl=file:///$PWD/releases/maven/ -Dfile=$PWD/ui.content/target/com.adobe.aem.demo.demo-utils.ui.content-$1.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.content -Dpackaging=zip -Dversion=$1
 mvn deploy:deploy-file -Durl=file:///$PWD/releases/maven/ -Dfile=$PWD/ui.apps/target/com.adobe.aem.demo.demo-utils.ui.apps-$1.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.ui.apps -Dpackaging=zip -Dversion=$1
+mvn deploy:deploy-file -Durl=file:///$PWD/releases/maven/ -Dfile=$PWD/ui.apps/target/com.adobe.aem.demo.demo-utils.all-$1.zip -DgroupId=com.adobe.aem.demo -DartifactId=com.adobe.aem.demo.demo-utils.all -Dpackaging=zip -Dversion=$1
 
 mvn versions:set -DnewVersion=$2
 git add .
