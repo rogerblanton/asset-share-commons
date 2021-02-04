@@ -21,9 +21,7 @@
     <dynamic-media/>
     <smart-crop/>
     <dynamic-media-360-vr/>
-
-
-
+    
     <!-- Sites -->
     <wknd-styler />
     <core-components-showcase/>
@@ -31,6 +29,7 @@
     <spa-editor />
     <hybrid-cms />
 
+    <graphql />
     <aem-headless />
     <content-fragments-api/>
 

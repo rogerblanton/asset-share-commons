@@ -1,0 +1,15 @@
+{
+    "workfront.folder.path":"$[env:workfront_folder_path]",
+    "workfront.api.key": "$[env:workfront_api_key]",
+    "workfront.url" : "https://organization.my.workfront.com",
+    "webhooks.api.key": "{UNIQUE_ID}",
+    "document.sync.auth.token": "$[env:workfront_unique_id]",
+    "comment.sync.auth.token": "$[env:workfront_unique_id]",
+    "metadata.sync.auth.token": "$[env:workfront_unique_id]",
+    "request.whitelist": [ "$[env:workfront_ip_allow_list]" ],
+    "ignore.domain": false,
+    "use.sso.username": false,
+    "show.collections": true,
+    "version.enabled": true    
+}
+

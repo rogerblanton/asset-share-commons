@@ -29,36 +29,16 @@ The following are features that are intended to work on AEM as a Cloud Service (
 | Assets - Dynamic Media | Image Smart Crop | ✔ | ✔ |
 | Assets - Dynamic Media | Video Smart Crop | ✔ | ✔ |
 | Assets - Dynamic Media | 360/VR video | ✔ | ✔ |
+| Assets | Assets Templates (InDesign Server integration, requires provisioning on InDesign Server in AMS) | ✔ | ✔ |
 | Sites | Core Components Showcase | ✔ | ✔ |
 | Sites | Hybrid CMS Demo | ✘ | ✘ |
 | Sites | WKND Site | ✔ | ✔ |
 | Sites | WKND App (SPA Editor) | ✔ | ✔ |
-| Content Services | Content Fragment HTTP API (read-only) | ✔ | ✔ |
+| Sites | WKND SPA (GraphQL) | ✔ | ✔ |
+| Sites | WKND SPA (GraphQL) | ✔ | ✔ |
+| Content Services | Creating users/profiles on AEM on AEM Publish (requires request to Adobe Support) | ✔ | ✔ |
 | Content Services | WKND Mobile (AEM Headless) | ✔ | ✔ |
 | All  | E-mailing from AEM (requires request to Adobe Support) | ✔ | ✔ |
-
-### Unsupported and Roadmap Features
-
-The following features are currently not supported by AEM as a Cloud Service. Items in this list may eventually be supported by AEM as a Cloud Service.
-
-The ETA column in the table below gives a rough indicator when features might be made available in AEM as a Cloud Service. Note that the timing may change as priorities evolve.
-
-
-|        | ETA  | Feature |
-|--------|------|---------|
-| All    | TBD  | User generated content on AEM Publish (no writes to AEM Publish) |
-| Assets | TBD | Assets Catalogs (Commerce & InDesign Server integration)) |
-| Assets | TBD | Assets Templates (InDesign Server integration) |
-| Assets | TBD | InDesign Server integration (replacement w/ parity microservices) |
-| Assets | TBD | Photoshoot Project (AEM Projects) |
-| Assets | TBD  | Smart Translation Search |
-| Assets | TBD  | Assets HTTP API *(for write operations)* |
-| Assets | TBD  | YouTube publishing |
-| Assets | TBD  | Zip file extraction |
-| Sites | Never | Design / Landing Page Importer |
-| Communities | TBD | Currently not supported |
-| Screens | 2021 | Not supported |
-| Forms | 2021 | Not Supported; [See details](https://wiki.corp.adobe.com/display/WEM/AEM+Forms+Services+and+Skyline) |
 
 ## FAQs
 
