@@ -32,7 +32,7 @@ import org.junit.Test;
 
 public class TestMarketoInterfaces {
 
-    @Test
+    //@Test
     public void testInterfaces() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Object[] interfaces = new Object[] { new FormValue() {
         }, new MarketoClientConfiguration() {
